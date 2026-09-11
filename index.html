@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Freight Nexus — Intermodal, Grain & General Freight Brokerage</title>
+  <meta name="description" content="Freight Nexus connects shippers with vetted intermodal, grain and general freight capacity across North America — with real-time visibility from first mile to last." />
+  <meta name="theme-color" content="#0A2C2D" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Freight Nexus — Moving what matters, across every mile." />
+  <meta property="og:description" content="Intermodal, grain and general freight brokerage with vetted capacity and real-time visibility across North America." />
+  <meta property="og:image" content="/images/hero-truck.jpg" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/images/hero-truck.jpg" />
+</head>
+<body>
+
+  <!-- ============================== PRELOADER ============================== -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__cols">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="preloader__inner">
+      <div class="preloader__logo">
+        <span class="preloader__word" data-preload-word>Freight</span>
+        <span class="preloader__word preloader__word--italic" data-preload-word>Nexus</span>
+      </div>
+      <div class="preloader__meta">
+        <span class="preloader__tag">Intermodal &nbsp;·&nbsp; Grain &nbsp;·&nbsp; General Freight</span>
+        <span class="preloader__count"><span class="preloader__num" id="preloader-num">00</span><sup>%</sup></span>
+      </div>
+      <div class="preloader__bar"><span id="preloader-bar"></span></div>
+    </div>
+  </div>
+
+  <!-- ============================== CURSOR ============================== -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__ring"><div class="cursor__ring-inner"><span class="cursor__label"></span></div></div>
+    <div class="cursor__dot"><i></i></div>
+  </div>
+
+  <!-- ============================== NAVIGATION ============================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo" data-scroll-to aria-label="Freight Nexus — home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path class="logo-mark__path" d="M11 33V11L33 33V11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle class="logo-mark__node" cx="11" cy="11" r="3.4" fill="currentColor"/>
+            <circle class="logo-mark__node" cx="33" cy="33" r="3.4" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo-type">Freight<em>Nexus</em></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#services" class="nav__link" data-scroll-to><span data-text="Services">Services</span></a>
+        <a href="#journey" class="nav__link" data-scroll-to><span data-text="Journey">Journey</span></a>
+        <a href="#process" class="nav__link" data-scroll-to><span data-text="Process">Process</span></a>
+        <a href="#network" class="nav__link" data-scroll-to><span data-text="Network">Network</span></a>
+        <a href="#testimonials" class="nav__link" data-scroll-to><span data-text="Clients">Clients</span></a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="#contact" class="btn btn--rose btn--sm" data-scroll-to data-magnetic>
+          <span class="btn__label">Request a quote</span>
+          <span class="btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+        <button class="nav__burger" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================== FULLSCREEN MENU ============================== -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__bg"><img src="/images/truck-bw.jpg" alt="" /></div>
+    <div class="menu__inner">
+      <nav class="menu__links" aria-label="Menu">
+        <a href="#services" class="menu__link" data-scroll-to><span class="menu__num">01</span><span class="menu__text">Services</span></a>
+        <a href="#inside" class="menu__link" data-scroll-to><span class="menu__num">02</span><span class="menu__text">Inside a load</span></a>
+        <a href="#journey" class="menu__link" data-scroll-to><span class="menu__num">03</span><span class="menu__text">The journey</span></a>
+        <a href="#process" class="menu__link" data-scroll-to><span class="menu__num">04</span><span class="menu__text">Process</span></a>
+        <a href="#network" class="menu__link" data-scroll-to><span class="menu__num">05</span><span class="menu__text">Network</span></a>
+        <a href="#contact" class="menu__link" data-scroll-to><span class="menu__num">06</span><span class="menu__text">Contact</span></a>
+      </nav>
+      <div class="menu__aside">
+        <div class="menu__block">
+          <span class="eyebrow eyebrow--light">Dispatch, 24/7</span>
+          <a href="tel:+13125550148" class="menu__contact">+1 (312) 555-0148</a>
+          <a href="mailto:quotes@freightnexus.com" class="menu__contact">quotes@freightnexus.com</a>
+        </div>
+        <div class="menu__block">
+          <span class="eyebrow eyebrow--light">Headquarters</span>
+          <p>1200 W Fulton Market, Suite 400<br />Chicago, IL 60607</p>
+        </div>
+        <div class="menu__socials">
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="home">
+      <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <div class="hero__eyebrow" data-hero="eyebrow">
+            <span class="eyebrow eyebrow--rose">Intermodal &nbsp;·&nbsp; Grain &nbsp;·&nbsp; General Freight</span>
+          </div>
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__line">Moving what</span>
+            <span class="hero__line">matters, <em>across</em></span>
+            <span class="hero__line"><em>every mile.</em></span>
+          </h1>
+          <p class="hero__lead" data-hero="lead">
+            Freight Nexus is a full-service brokerage connecting shippers with vetted
+            intermodal, grain and general freight capacity across North America —
+            with real-time visibility from first mile to last.
+          </p>
+          <div class="hero__actions" data-hero="actions">
+            <a href="#contact" class="btn btn--rose" data-scroll-to data-magnetic>
+              <span class="btn__label">Get a quote</span>
+              <span class="btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+            <a href="#services" class="btn btn--ghost" data-scroll-to data-magnetic>
+              <span class="btn__label">Explore services</span>
+            </a>
+          </div>
+        </div>
+
+        <ul class="hero__stats" data-hero="stats" aria-label="Key figures">
+          <li><strong data-counter="4200" data-suffix="+">0</strong><span>Vetted carriers</span></li>
+          <li><strong data-counter="99.2" data-decimals="1" data-suffix="%">0</strong><span>On-time delivery</span></li>
+          <li><strong data-counter="48" data-suffix="">0</strong><span>States + CA / MX</span></li>
+          <li><strong data-counter="1.4" data-decimals="1" data-suffix="M">0</strong><span>Loads moved</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__scroll" data-hero="scroll" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <i></i>
+      </div>
+      <div class="hero__side" data-hero="side" aria-hidden="true">
+        <span>Chicago&nbsp;&nbsp;—&nbsp;&nbsp;Est. 2014</span>
+      </div>
+    </section>
+
+    <!-- ============================== IMMERSIVE ZOOM ============================== -->
+    <section class="zoom" id="zoom">
+      <div class="zoom__sticky">
+        <div class="zoom__frame" id="zoom-frame">
+          <img src="/images/hero-truck.jpg" alt="Freight Nexus semi truck on the highway at sunset" id="zoom-img" />
+          <div class="zoom__shade"></div>
+        </div>
+        <div class="zoom__caption" id="zoom-caption">
+          <span class="eyebrow eyebrow--rose">First mile to last</span>
+          <h2>Every mile,<br /><em>accounted for.</em></h2>
+        </div>
+        <div class="zoom__manifesto" id="zoom-manifesto">
+          <p data-fill-text>
+            We are the nexus between the people who grow, build and make — and the
+            rails, ports and roads that carry their work to the world. One partner.
+            Every mode. Total visibility.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== MARQUEE ============================== -->
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee__inner">
+        <div class="marquee__group">
+          <span class="marquee__item">Intermodal</span><i>✦</i>
+          <span class="marquee__item marquee__item--italic">Grain</span><i>✦</i>
+          <span class="marquee__item">General Freight</span><i>✦</i>
+          <span class="marquee__item marquee__item--italic">Rail</span><i>✦</i>
+          <span class="marquee__item">Port</span><i>✦</i>
+          <span class="marquee__item marquee__item--italic">Road</span><i>✦</i>
+        </div>
+        <div class="marquee__group">
+          <span class="marquee__item">Intermodal</span><i>✦</i>
+          <span class="marquee__item marquee__item--italic">Grain</span><i>✦</i>
+          <span class="marquee__item">General Freight</span><i>✦</i>
+          <span class="marquee__item marquee__item--italic">Rail</span><i>✦</i>
+          <span class="marquee__item">Port</span><i>✦</i>
+          <span class="marquee__item marquee__item--italic">Road</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================== SERVICES ============================== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-reveal>What we move</span>
+          <h2 class="section-title" data-split>Three specialties.<br /><em>One nexus.</em></h2>
+          <p class="section-lead" data-reveal>
+            Whether it's a container off a vessel, a hopper of hard red winter wheat or a flatbed of steel,
+            Freight Nexus puts the right equipment under it — and the right people behind it.
+          </p>
+        </header>
+
+        <div class="services__list" id="services-list">
+          <a href="#contact" class="services__row" data-scroll-to data-freight="intermodal" data-preview="0" data-cursor="view">
+            <span class="services__num">01</span>
+            <div class="services__main">
+              <h3 class="services__title">Intermodal</h3>
+              <p class="services__desc">
+                Rail-to-road, port-to-door. We orchestrate container moves through Class I rail networks
+                and major ports, with drayage on both ends handled by one team.
+              </p>
+              <ul class="services__tags">
+                <li>Drayage</li><li>20' / 40' / 53'</li><li>Port &amp; rail ramps</li><li>Transloading</li>
+              </ul>
+            </div>
+            <div class="services__media">
+              <img src="/images/container-yard.jpg" alt="Aerial view of an intermodal container yard" loading="lazy" />
+            </div>
+            <span class="services__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+
+          <a href="#contact" class="services__row" data-scroll-to data-freight="grain" data-preview="1" data-cursor="view">
+            <span class="services__num">02</span>
+            <div class="services__main">
+              <h3 class="services__title">Grain</h3>
+              <p class="services__desc">
+                Harvest doesn't wait. Hopper-bottom, bulk and bagged grain moves from elevator to processor,
+                with surge capacity when the fields come in.
+              </p>
+              <ul class="services__tags">
+                <li>Hopper bottom</li><li>Bulk &amp; bagged</li><li>Elevator to export</li><li>Surge capacity</li>
+              </ul>
+            </div>
+            <div class="services__media">
+              <img src="/images/wheat-field.jpg" alt="Golden wheat field at sunset" loading="lazy" />
+            </div>
+            <span class="services__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+
+          <a href="#contact" class="services__row" data-scroll-to data-freight="general" data-preview="2" data-cursor="view">
+            <span class="services__num">03</span>
+            <div class="services__main">
+              <h3 class="services__title">General Freight</h3>
+              <p class="services__desc">
+                Dry van, flatbed and reefer capacity for everything on a pallet — or too big for one.
+                Full truckload and LTL, coast to coast.
+              </p>
+              <ul class="services__tags">
+                <li>Dry van</li><li>Flatbed</li><li>Reefer</li><li>FTL &amp; LTL</li>
+              </ul>
+            </div>
+            <div class="services__media">
+              <img src="/images/truck-scania.jpg" alt="White semi truck on an open highway" loading="lazy" />
+            </div>
+            <span class="services__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- floating hover-reveal preview (desktop) -->
+      <div class="services__preview" id="services-preview" aria-hidden="true">
+        <div class="services__preview-inner">
+          <img src="/images/container-yard.jpg" alt="" />
+          <img src="/images/wheat-field.jpg" alt="" />
+          <img src="/images/truck-scania.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== EXPLODED CONTAINER (THREE.JS) ============================== -->
+    <section class="explode section section--dark" id="inside">
+      <div class="explode__sticky">
+        <div class="explode__grid container">
+          <div class="explode__text">
+            <span class="eyebrow eyebrow--rose" data-reveal>Inside every load</span>
+            <h2 class="section-title section-title--light" data-split>Engineered for<br /><em>the whole journey.</em></h2>
+            <p class="section-lead section-lead--light" data-reveal>
+              Scroll to open a Freight Nexus container. Every layer is a promise we make on every shipment.
+            </p>
+            <ol class="explode__list" id="explode-list">
+              <li class="explode__item is-active" data-index="0">
+                <span class="explode__item-num">01</span>
+                <div>
+                  <h4>Live telemetry</h4>
+                  <p>GPS, temperature and door events pushed to your dashboard every 30 seconds.</p>
+                </div>
+              </li>
+              <li class="explode__item" data-index="1">
+                <span class="explode__item-num">02</span>
+                <div>
+                  <h4>Certified equipment</h4>
+                  <p>ISO-certified 40' and 53' units, inspected and photographed before every load.</p>
+                </div>
+              </li>
+              <li class="explode__item" data-index="2">
+                <span class="explode__item-num">03</span>
+                <div>
+                  <h4>Cargo care</h4>
+                  <p>Food-grade liners and ventilation for grain, blocking and bracing for general freight.</p>
+                </div>
+              </li>
+              <li class="explode__item" data-index="3">
+                <span class="explode__item-num">04</span>
+                <div>
+                  <h4>Sealed &amp; verified</h4>
+                  <p>Bolt-sealed, documented and hand-off verified from origin to destination.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="explode__stage" id="explode-stage">
+            <canvas id="explode-canvas" aria-hidden="true"></canvas>
+            <div class="explode__labels" id="explode-labels" aria-hidden="true">
+              <div class="explode__label" data-label="0"><i></i><span>Telemetry unit<small>GPS · Temp · Door events</small></span></div>
+              <div class="explode__label" data-label="1"><i></i><span>Corten steel shell<small>ISO 668 · CSC plated</small></span></div>
+              <div class="explode__label" data-label="2"><i></i><span>Protected cargo<small>Liners · Bracing · Ventilation</small></span></div>
+              <div class="explode__label" data-label="3"><i></i><span>Bolt-sealed doors<small>Photographed at hand-off</small></span></div>
+            </div>
+            <div class="explode__progress" aria-hidden="true">
+              <span>Assembled</span><i><b id="explode-progress-bar"></b></i><span>Exploded</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== HORIZONTAL JOURNEY ============================== -->
+    <section class="journey section" id="journey">
+      <div class="journey__pin" id="journey-pin">
+        <div class="journey__track" id="journey-track">
+
+          <article class="journey__panel journey__panel--intro">
+            <div class="journey__intro">
+              <span class="eyebrow" data-reveal>Parallax story</span>
+              <h2 class="section-title" data-split>One shipment.<br />Four hand-offs.<br /><em>Zero gaps.</em></h2>
+              <p class="section-lead" data-reveal>Follow a single load through the Freight Nexus network — from the elevator to the customer's dock.</p>
+              <div class="journey__hint" data-reveal aria-hidden="true">
+                <span>Scroll</span>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <span class="journey__ghost" data-speed="0.3">Nexus</span>
+          </article>
+
+          <article class="journey__panel" data-stage="01">
+            <span class="journey__ghost" data-speed="0.35">Origin</span>
+            <span class="journey__big" data-speed="0.15">01</span>
+            <figure class="journey__figure" data-speed="0.5">
+              <img src="/images/wheat-field.jpg" alt="Golden wheat field at sunrise" loading="lazy" />
+              <figcaption>Elevator · Kansas</figcaption>
+            </figure>
+            <div class="journey__copy" data-speed="0.8">
+              <span class="eyebrow eyebrow--rose">Stage 01 — Origin</span>
+              <h3>Elevator &amp; dock</h3>
+              <p>Capacity confirmed within two hours. The driver arrives with a digital BOL already in hand and the load is weighed, sealed and rolling before lunch.</p>
+              <ul class="journey__meta"><li>2 hr capacity confirmation</li><li>Digital BOL &amp; scale ticket</li></ul>
+            </div>
+          </article>
+
+          <article class="journey__panel" data-stage="02">
+            <span class="journey__ghost" data-speed="0.35">Rail</span>
+            <span class="journey__big" data-speed="0.15">02</span>
+            <figure class="journey__figure" data-speed="0.5">
+              <img src="/images/freight-train.jpg" alt="Freight locomotive pulling tanker cars" loading="lazy" />
+              <figcaption>Intermodal ramp · Chicago</figcaption>
+            </figure>
+            <div class="journey__copy" data-speed="0.8">
+              <span class="eyebrow eyebrow--rose">Stage 02 — Rail</span>
+              <h3>Intermodal ramp</h3>
+              <p>Containers are lifted onto double-stack trains — four times the fuel efficiency of long-haul trucking, with every lift timestamped on your dashboard.</p>
+              <ul class="journey__meta"><li>4× fuel efficiency</li><li>Class I rail partners</li></ul>
+            </div>
+          </article>
+
+          <article class="journey__panel" data-stage="03">
+            <span class="journey__ghost" data-speed="0.35">Port</span>
+            <span class="journey__big" data-speed="0.15">03</span>
+            <figure class="journey__figure" data-speed="0.5">
+              <img src="/images/port-cranes.jpg" alt="Container ship being loaded by gantry cranes" loading="lazy" />
+              <figcaption>Ocean gateway · Savannah</figcaption>
+            </figure>
+            <div class="journey__copy" data-speed="0.8">
+              <span class="eyebrow eyebrow--rose">Stage 03 — Port</span>
+              <h3>Ocean gateway</h3>
+              <p>Customs pre-cleared, chassis pre-staged, appointment locked. Nothing waits at the terminal — and demurrage never lands on your invoice.</p>
+              <ul class="journey__meta"><li>Pre-cleared customs</li><li>Zero demurrage guarantee</li></ul>
+            </div>
+          </article>
+
+          <article class="journey__panel" data-stage="04">
+            <span class="journey__ghost" data-speed="0.35">Deliver</span>
+            <span class="journey__big" data-speed="0.15">04</span>
+            <figure class="journey__figure" data-speed="0.5">
+              <img src="/images/truck-mountain.jpg" alt="Semi truck driving a mountain highway" loading="lazy" />
+              <figcaption>Final mile · Denver</figcaption>
+            </figure>
+            <div class="journey__copy" data-speed="0.8">
+              <span class="eyebrow eyebrow--rose">Stage 04 — Delivery</span>
+              <h3>Final mile</h3>
+              <p>Delivered, signed and invoiced — with proof of delivery in your inbox before the truck has left the dock.</p>
+              <ul class="journey__meta"><li>Instant POD</li><li>Same-day invoicing</li></ul>
+            </div>
+          </article>
+
+          <article class="journey__panel journey__panel--end">
+            <div class="journey__end">
+              <h3>Delivered.<br /><em>Documented.</em><br />Done.</h3>
+              <a href="#contact" class="btn btn--teal" data-scroll-to data-magnetic>
+                <span class="btn__label">Start your first load</span>
+                <span class="btn__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+        <div class="journey__progress" aria-hidden="true">
+          <div class="journey__progress-bar"><span id="journey-progress"></span></div>
+          <ul class="journey__stages"><li>Origin</li><li>Rail</li><li>Port</li><li>Delivery</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROCESS (STACKING CARDS) ============================== -->
+    <section class="process section" id="process">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="eyebrow" data-reveal>How it works</span>
+          <h2 class="section-title" data-split>From quote to dock<br /><em>in four moves.</em></h2>
+        </header>
+      </div>
+      <div class="process__stack container" id="process-stack">
+        <article class="process__card process__card--teal" data-card="1">
+          <div class="process__card-inner">
+            <div class="process__card-text">
+              <span class="process__step">Step 01</span>
+              <h3>Quote in minutes</h3>
+              <p>Tell us origin, destination and freight. Our pricing engine returns transparent, all-in rates — no hidden accessorials, no games.</p>
+              <ul class="process__points"><li>15-minute average quote turnaround</li><li>All-in pricing, fuel included</li></ul>
+            </div>
+            <div class="process__card-media">
+              <img src="/images/highway-aerial.jpg" alt="Aerial view of a highway interchange" loading="lazy" />
+              <span class="process__badge">01</span>
+            </div>
+          </div>
+        </article>
+        <article class="process__card process__card--rose" data-card="2">
+          <div class="process__card-inner">
+            <div class="process__card-text">
+              <span class="process__step">Step 02</span>
+              <h3>Matched to vetted capacity</h3>
+              <p>We tap 4,200+ carriers scored on safety, on-time performance and equipment quality. Only the best get your load.</p>
+              <ul class="process__points"><li>Safety-scored, insurance-verified</li><li>Re-audited every 90 days</li></ul>
+            </div>
+            <div class="process__card-media">
+              <img src="/images/truck-trailer.jpg" alt="Semi trailer at sunset" loading="lazy" />
+              <span class="process__badge">02</span>
+            </div>
+          </div>
+        </article>
+        <article class="process__card process__card--deep" data-card="3">
+          <div class="process__card-inner">
+            <div class="process__card-text">
+              <span class="process__step">Step 03</span>
+              <h3>Tracked in real time</h3>
+              <p>Live GPS, milestone alerts and a dedicated coordinator who calls you before you ever need to call them.</p>
+              <ul class="process__points"><li>30-second GPS refresh</li><li>Exception alerts by SMS &amp; email</li></ul>
+            </div>
+            <div class="process__card-media">
+              <img src="/images/ship-aerial.jpg" alt="Aerial view of a container ship at sea" loading="lazy" />
+              <span class="process__badge">03</span>
+            </div>
+          </div>
+        </article>
+        <article class="process__card process__card--cream" data-card="4">
+          <div class="process__card-inner">
+            <div class="process__card-text">
+              <span class="process__step">Step 04</span>
+              <h3>Delivered &amp; documented</h3>
+              <p>POD, invoice and audit trail land in your inbox the moment the freight is signed for. Clean books, every load.</p>
+              <ul class="process__points"><li>Instant proof of delivery</li><li>Single consolidated invoice</li></ul>
+            </div>
+            <div class="process__card-media">
+              <img src="/images/warehouse.jpg" alt="Modern distribution warehouse" loading="lazy" />
+              <span class="process__badge">04</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================== NETWORK (VERTICAL COLUMNS) ============================== -->
+    <section class="network section section--dark" id="network">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <span class="eyebrow eyebrow--rose" data-reveal>The network</span>
+            <h2 class="section-title section-title--light" data-split>Reaching everywhere<br /><em>you ship.</em></h2>
+          </div>
+          <p class="section-lead section-lead--light" data-reveal>
+            Rail ramps, ocean gateways, grain elevators and cross-docks — stitched into one network with a single point of contact.
+          </p>
+        </header>
+      </div>
+
+      <div class="columns" id="columns">
+        <div class="columns__col" data-dir="-1">
+          <div class="hub"><img src="/images/freight-train.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Intermodal ramp</span><h4>Chicago Rail Hub</h4><small>6 Class I connections</small></div></div>
+          <div class="hub"><img src="/images/port-cranes.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Ocean gateway</span><h4>Port of Savannah</h4><small>1,800 lifts / month</small></div></div>
+          <div class="hub"><img src="/images/wheat-field.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Elevator network</span><h4>Kansas Grain Belt</h4><small>140 elevators</small></div></div>
+          <div class="hub"><img src="/images/warehouse-aisles.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Cross-dock</span><h4>Dallas Distribution</h4><small>24 / 7 operations</small></div></div>
+        </div>
+        <div class="columns__col" data-dir="1">
+          <div class="hub"><img src="/images/port-aerial.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Ocean gateway</span><h4>Port of Los Angeles</h4><small>Trans-Pacific lanes</small></div></div>
+          <div class="hub"><img src="/images/grain-closeup.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Grain exchange</span><h4>Minneapolis</h4><small>Spring wheat &amp; oats</small></div></div>
+          <div class="hub"><img src="/images/container-yard.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Intermodal ramp</span><h4>Memphis Intermodal</h4><small>Mid-South corridor</small></div></div>
+          <div class="hub"><img src="/images/truck-sunset.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Border crossing</span><h4>Laredo Gateway</h4><small>Bonded carriers</small></div></div>
+        </div>
+        <div class="columns__col" data-dir="-0.6">
+          <div class="hub"><img src="/images/container-ship.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Ocean gateway</span><h4>Port of Houston</h4><small>Gulf export hub</small></div></div>
+          <div class="hub"><img src="/images/warehouse-shelves.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Elevator network</span><h4>Omaha Elevators</h4><small>Corn &amp; soybean</small></div></div>
+          <div class="hub"><img src="/images/highway-aerial.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Cross-dock</span><h4>Atlanta Cross-dock</h4><small>Southeast hub</small></div></div>
+          <div class="hub"><img src="/images/truck-mountain.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Border crossing</span><h4>Toronto Gateway</h4><small>Canada lanes</small></div></div>
+        </div>
+        <div class="columns__col" data-dir="0.8">
+          <div class="hub"><img src="/images/ship-aerial.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Ocean gateway</span><h4>Seattle–Tacoma</h4><small>Pacific Northwest</small></div></div>
+          <div class="hub"><img src="/images/grain-closeup.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Grain hub</span><h4>Des Moines</h4><small>Harvest surge capacity</small></div></div>
+          <div class="hub"><img src="/images/warehouse.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Cross-dock</span><h4>Columbus Distribution</h4><small>Ohio Valley</small></div></div>
+          <div class="hub"><img src="/images/truck-scania.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Border crossing</span><h4>Monterrey Corridor</h4><small>Mexico lanes</small></div></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="stats" id="stats">
+          <li class="stats__item" data-reveal>
+            <strong><span data-counter="4200" data-suffix="+">0</span></strong>
+            <span class="stats__label">Vetted carriers in network</span>
+          </li>
+          <li class="stats__item" data-reveal>
+            <strong><span data-counter="99.2" data-decimals="1" data-suffix="%">0</span></strong>
+            <span class="stats__label">On-time delivery, trailing 12 months</span>
+          </li>
+          <li class="stats__item" data-reveal>
+            <strong><span data-counter="62" data-suffix="">0</span></strong>
+            <span class="stats__label">Rail ramps &amp; ports served</span>
+          </li>
+          <li class="stats__item" data-reveal>
+            <strong><span data-counter="1.4" data-decimals="1" data-suffix="M">0</span></strong>
+            <span class="stats__label">Loads moved since 2014</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== CAPABILITIES (3D TILT) ============================== -->
+    <section class="capabilities section" id="capabilities">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="eyebrow" data-reveal>Why Freight Nexus</span>
+          <h2 class="section-title" data-split>Built for shippers who<br /><em>can't afford surprises.</em></h2>
+        </header>
+
+        <div class="tilt-grid" id="tilt-grid">
+          <article class="tilt" data-tilt>
+            <div class="tilt__glare"></div>
+            <div class="tilt__icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/><path d="M16 4v4M28 16h-4M16 28v-4M4 16h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <h3>Real-time visibility</h3>
+            <p>GPS tracking, milestone alerts and exception management on every single load, in one dashboard.</p>
+            <span class="tilt__num">01</span>
+          </article>
+          <article class="tilt" data-tilt>
+            <div class="tilt__glare"></div>
+            <div class="tilt__icon"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l10 4v8c0 7-4.5 11.5-10 14C10.5 26.5 6 22 6 15V7l10-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Vetted carrier network</h3>
+            <p>Safety-scored, insurance-verified carriers — re-audited every 90 days. Only the top tier hauls for us.</p>
+            <span class="tilt__num">02</span>
+          </article>
+          <article class="tilt" data-tilt>
+            <div class="tilt__glare"></div>
+            <div class="tilt__icon"><svg viewBox="0 0 32 32" fill="none"><path d="M6 20a10 10 0 0 1 20 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="4" y="18" width="5" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="23" y="18" width="5" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M25 26c0 2-2 3-5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <h3>Dedicated coordinators</h3>
+            <p>One person owns your account and knows your lanes by heart. 24/7 dispatch behind them.</p>
+            <span class="tilt__num">03</span>
+          </article>
+          <article class="tilt" data-tilt>
+            <div class="tilt__glare"></div>
+            <div class="tilt__icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M19.5 12.5c-.5-1.5-2-2-3.5-2-2 0-3.5 1-3.5 2.5s1.5 2 3.5 2.5 3.5 1 3.5 2.5-1.5 2.5-3.5 2.5c-1.7 0-3.2-.7-3.7-2.2M16 8.5v2M16 21.5v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <h3>Transparent pricing</h3>
+            <p>All-in rates with fuel included and no surprise accessorials on the invoice. Ever.</p>
+            <span class="tilt__num">04</span>
+          </article>
+          <article class="tilt" data-tilt>
+            <div class="tilt__glare"></div>
+            <div class="tilt__icon"><svg viewBox="0 0 32 32" fill="none"><path d="M4 11l12-6 12 6v10l-12 6-12-6V11z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 11l12 6 12-6M16 17v10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+            <h3>Cargo protection</h3>
+            <p>$250K standard cargo coverage on every load, with excess coverage available for high-value freight.</p>
+            <span class="tilt__num">05</span>
+          </article>
+          <article class="tilt" data-tilt>
+            <div class="tilt__glare"></div>
+            <div class="tilt__icon"><svg viewBox="0 0 32 32" fill="none"><path d="M9 4h10l6 6v18H9V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M19 4v6h6M13 16h8M13 20h8M13 24h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <h3>Compliance &amp; customs</h3>
+            <p>FMCSA, USDA and cross-border paperwork handled end to end — Canada and Mexico lanes included.</p>
+            <span class="tilt__num">06</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== TESTIMONIALS (3D SLIDER) ============================== -->
+    <section class="testimonials section section--rose" id="testimonials">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="eyebrow" data-reveal>Client stories</span>
+          <h2 class="section-title" data-split>Trusted by the people<br /><em>who ship for a living.</em></h2>
+        </header>
+      </div>
+
+      <div class="slider3d" id="slider3d" data-cursor="drag">
+        <div class="slider3d__stage">
+          <div class="slider3d__track" id="slider3d-track">
+            <article class="slider3d__card">
+              <div class="slider3d__stars" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></div>
+              <blockquote>"Freight Nexus took our harvest logistics from chaos to clockwork. 340 hopper loads last fall — not a single missed elevator window."</blockquote>
+              <footer><strong>Dana Whitfield</strong><span>Operations Director, Prairie Gold Co-op</span></footer>
+            </article>
+            <article class="slider3d__card">
+              <div class="slider3d__stars" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></div>
+              <blockquote>"Their intermodal team shaved 18% off our Chicago–LA lane costs without touching transit time. That's real money."</blockquote>
+              <footer><strong>Marcus Bell</strong><span>VP Supply Chain, Northwind Manufacturing</span></footer>
+            </article>
+            <article class="slider3d__card">
+              <div class="slider3d__stars" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></div>
+              <blockquote>"We finally have one number to call. The visibility dashboard alone was worth the switch."</blockquote>
+              <footer><strong>Priya Raman</strong><span>Logistics Manager, Cascade Foods</span></footer>
+            </article>
+            <article class="slider3d__card">
+              <div class="slider3d__stars" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></div>
+              <blockquote>"Flatbed capacity in peak season used to be a nightmare. Now it's a phone call and a confirmation email."</blockquote>
+              <footer><strong>Tom Alvarez</strong><span>Plant Manager, Ironline Steel</span></footer>
+            </article>
+            <article class="slider3d__card">
+              <div class="slider3d__stars" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></div>
+              <blockquote>"Real people, real answers, at 2 a.m. when a load goes sideways. That's the difference."</blockquote>
+              <footer><strong>Elena Moreau</strong><span>Director of Distribution, Verdant Organics</span></footer>
+            </article>
+            <article class="slider3d__card">
+              <div class="slider3d__stars" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></div>
+              <blockquote>"The most responsive brokerage we've worked with in twenty years of shipping grain."</blockquote>
+              <footer><strong>Hank Sorensen</strong><span>Owner, Sorensen Farms</span></footer>
+            </article>
+          </div>
+        </div>
+        <div class="slider3d__controls">
+          <button class="slider3d__btn" id="slider3d-prev" aria-label="Previous testimonial" data-magnetic>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="slider3d__dots" id="slider3d-dots"></div>
+          <button class="slider3d__btn" id="slider3d-next" aria-label="Next testimonial" data-magnetic>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <ul class="logos" id="logos" aria-label="Clients">
+        <li data-reveal>Prairie Gold</li>
+        <li data-reveal>Northwind</li>
+        <li data-reveal>Cascade Foods</li>
+        <li data-reveal>Ironline</li>
+        <li data-reveal>Verdant</li>
+        <li data-reveal>Sorensen</li>
+      </ul>
+    </section>
+
+    <!-- ============================== FAQ ============================== -->
+    <section class="faq section" id="faq">
+      <div class="container faq__grid">
+        <div class="faq__head">
+          <span class="eyebrow" data-reveal>Questions</span>
+          <h2 class="section-title" data-split>Straight answers,<br /><em>before you ship.</em></h2>
+          <p class="section-lead" data-reveal>Can't find what you need? Our dispatch desk is open around the clock.</p>
+          <a href="tel:+13125550148" class="faq__phone" data-reveal>+1 (312) 555-0148</a>
+        </div>
+        <div class="faq__list" id="faq-list">
+          <details class="faq__item" data-reveal>
+            <summary><span>What types of freight does Freight Nexus handle?</span><i></i></summary>
+            <div class="faq__body"><p>Intermodal container moves, bulk and bagged grain, and general freight — dry van, flatbed and reefer — across the United States, Canada and Mexico.</p></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary><span>How fast can I get a quote?</span><i></i></summary>
+            <div class="faq__body"><p>Most quotes are returned within 15 minutes during business hours. Spot capacity is typically confirmed within two hours of acceptance.</p></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary><span>Is my cargo insured?</span><i></i></summary>
+            <div class="faq__body"><p>Every load carries $250,000 in standard cargo coverage. Excess coverage is available for high-value shipments — just tell us when you request the quote.</p></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary><span>Can I track my shipment in real time?</span><i></i></summary>
+            <div class="faq__body"><p>Yes. GPS updates every 30 seconds, milestone alerts by SMS and email, and a live dashboard on every load — no app to install.</p></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary><span>Do you handle cross-border shipments?</span><i></i></summary>
+            <div class="faq__body"><p>We manage customs documentation, bonded carriers and broker coordination for Canada and Mexico lanes, including Laredo, Detroit and Blaine crossings.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT / QUOTE ============================== -->
+    <section class="contact section section--dark" id="contact">
+      <div class="contact__bg" aria-hidden="true"><img src="/images/port-aerial.jpg" alt="" loading="lazy" data-parallax="0.15" /></div>
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <span class="eyebrow eyebrow--rose" data-reveal>Request a quote</span>
+          <h2 class="section-title section-title--light" data-split>Let's move<br /><em>your freight.</em></h2>
+          <p class="section-lead section-lead--light" data-reveal>
+            Tell us about the lane and we'll come back with all-in pricing, usually within 15 minutes.
+          </p>
+          <ul class="contact__details">
+            <li data-reveal><span>Dispatch, 24/7</span><a href="tel:+13125550148">+1 (312) 555-0148</a></li>
+            <li data-reveal><span>Quotes</span><a href="mailto:quotes@freightnexus.com">quotes@freightnexus.com</a></li>
+            <li data-reveal><span>Headquarters</span><address>1200 W Fulton Market, Suite 400<br />Chicago, IL 60607</address></li>
+            <li data-reveal><span>Office hours</span><p>Mon – Fri, 7:00 am – 7:00 pm CT</p></li>
+          </ul>
+        </div>
+
+        <form class="form" id="quote-form" novalidate data-reveal>
+          <div class="form__row">
+            <label class="field">
+              <input type="text" name="name" placeholder=" " required autocomplete="name" />
+              <span>Full name</span>
+            </label>
+            <label class="field">
+              <input type="text" name="company" placeholder=" " autocomplete="organization" />
+              <span>Company</span>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="field">
+              <input type="email" name="email" placeholder=" " required autocomplete="email" />
+              <span>Work email</span>
+            </label>
+            <label class="field">
+              <input type="tel" name="phone" placeholder=" " autocomplete="tel" />
+              <span>Phone</span>
+            </label>
+          </div>
+
+          <fieldset class="segmented" id="freight-type">
+            <legend>Freight type</legend>
+            <div class="segmented__track">
+              <span class="segmented__pill" id="segmented-pill"></span>
+              <label><input type="radio" name="freight" value="intermodal" checked /><span>Intermodal</span></label>
+              <label><input type="radio" name="freight" value="grain" /><span>Grain</span></label>
+              <label><input type="radio" name="freight" value="general" /><span>General Freight</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form__row">
+            <label class="field">
+              <input type="text" name="origin" placeholder=" " required />
+              <span>Origin (city, state)</span>
+            </label>
+            <label class="field">
+              <input type="text" name="destination" placeholder=" " required />
+              <span>Destination (city, state)</span>
+            </label>
+          </div>
+          <label class="field field--textarea">
+            <textarea name="details" placeholder=" " rows="3"></textarea>
+            <span>Weight, equipment, dates — anything we should know</span>
+          </label>
+
+          <div class="form__footer">
+            <button type="submit" class="btn btn--rose btn--lg" id="form-submit" data-magnetic>
+              <span class="btn__label">Send request</span>
+              <span class="btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <p class="form__note">No spam, no auto-dialers. A real coordinator replies.</p>
+          </div>
+
+          <div class="form__success" id="form-success" aria-live="polite">
+            <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2" id="success-circle"/><path d="M20 33l8 8 16-18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="success-check"/></svg>
+            <h3>Request received.</h3>
+            <p>A coordinator will reach out within 15 minutes during business hours.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#home" class="nav__logo" data-scroll-to aria-label="Freight Nexus — home">
+            <span class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none">
+                <path d="M11 33V11L33 33V11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="11" cy="11" r="3.4" fill="currentColor"/>
+                <circle cx="33" cy="33" r="3.4" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="logo-type">Freight<em>Nexus</em></span>
+          </a>
+          <p>Intermodal, grain and general freight brokerage. Chicago-born, North America-wide.</p>
+          <form class="footer__news" id="footer-news">
+            <input type="email" placeholder="Lane insights, monthly" aria-label="Email address" />
+            <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </form>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h5>Services</h5>
+            <a href="#services" data-scroll-to>Intermodal</a>
+            <a href="#services" data-scroll-to>Grain</a>
+            <a href="#services" data-scroll-to>General Freight</a>
+            <a href="#contact" data-scroll-to>Cross-border</a>
+          </div>
+          <div class="footer__col">
+            <h5>Company</h5>
+            <a href="#inside" data-scroll-to>Inside a load</a>
+            <a href="#journey" data-scroll-to>The journey</a>
+            <a href="#network" data-scroll-to>Network</a>
+            <a href="#contact" data-scroll-to>Careers</a>
+          </div>
+          <div class="footer__col">
+            <h5>Contact</h5>
+            <a href="tel:+13125550148">+1 (312) 555-0148</a>
+            <a href="mailto:quotes@freightnexus.com">quotes@freightnexus.com</a>
+            <a href="#contact" data-scroll-to>1200 W Fulton Market<br />Chicago, IL 60607</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__giant" aria-hidden="true">
+        <span class="footer__giant-word" data-giant>Freight</span>
+        <span class="footer__giant-word footer__giant-word--italic" data-giant>Nexus</span>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Freight Nexus LLC. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Carrier setup</a>
+        </div>
+        <button class="footer__top-btn" id="back-to-top" data-magnetic>
+          <span>Back to top</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

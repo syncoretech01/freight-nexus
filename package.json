@@ -1,0 +1,21 @@
+{
+  "name": "freight-nexus",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Freight Nexus — premium intermodal, grain and general freight brokerage website",
+  "scripts": {
+    "dev": "vite --host --open",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.4",
+    "motion": "^12.23.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}
