@@ -65,16 +65,21 @@ per level) · **Inter Tight** (body) · **DM Mono** (labels).
 
 ### Logo assets — `public/brand/`
 
-The logo is used exactly as supplied — no recolouring. Because the site ground
-is navy and the mark is navy + blue, it sits on a light plate (`.logo-plate`)
-wherever it appears, so the dark half of the artwork reads at full contrast.
+The logo is used exactly as supplied — the asset files are unmodified and sit
+on a transparent background. Because the site ground is navy and the mark is
+navy + blue, `.logo-lockup` renders it with a CSS brightness lift and a faint
+aqua glow so the dark half reads. Nothing is recoloured: the original
+navy → blue relationship is preserved, and the same files drop straight onto a
+light background unchanged.
 
 | File | Use |
 | --- | --- |
 | `logo-mark.*` | the mark, in the nav / footer / preloader plate |
 | `logo-wordmark.*` | the wordmark beside it |
 | `logo-full.*` | stacked lockup |
-| `icon-mark.png` | favicon fallback + apple-touch-icon |
+| `icon-16/32/48.png` | browser tab icons (transparent) |
+| `icon-180.png` | apple-touch-icon (opaque navy — iOS composites transparency onto black) |
+| `icon-512.png` | large icon / PWA |
 | `og-card.jpg` | social share card |
 
 `.webp` is served with a `.png` fallback via `<picture>`.

@@ -66,38 +66,37 @@
 .btn--lg .btn__icon { width: 3rem; height: 3rem; }
 
 /* ---------- Logo ----------
-   The mark is used exactly as supplied (navy + blue). Because the site ground
-   is navy, it sits on a light plate so the dark half of the artwork reads. */
+   The supplied artwork is used untouched on a transparent background. Because
+   the mark is navy + blue and the site ground is navy, it is rendered with a
+   brightness lift and a faint aqua glow so the dark half reads — the colour
+   relationship of the original is preserved, nothing is recoloured, and the
+   asset files themselves are unmodified. */
 .nav__logo { display: inline-flex; align-items: center; line-height: 0; }
-.logo-plate {
+.logo-lockup {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.44rem 0.85rem 0.44rem 0.6rem;
-  border-radius: 14px;
-  background: linear-gradient(170deg, #ffffff 0%, var(--ice-100) 100%);
-  box-shadow: 0 8px 24px rgba(0, 16, 42, 0.32), inset 0 0 0 1px rgba(255, 255, 255, 0.9);
-  transition: transform 0.6s var(--ease-expo), box-shadow 0.5s var(--ease-expo), padding 0.5s var(--ease-expo);
+  gap: 0.62rem;
+  line-height: 0;
+  filter: brightness(1.85) saturate(1.12) drop-shadow(0 0 6px rgba(116, 216, 212, 0.34));
+  transition: filter 0.45s var(--ease-expo), transform 0.6s var(--ease-expo);
   will-change: transform;
 }
-.logo-mark { width: auto; height: 30px; transition: height 0.5s var(--ease-expo); }
-.logo-word { width: auto; height: 12px; margin-top: 1px; transition: height 0.5s var(--ease-expo); }
-.nav__logo:hover .logo-plate {
+.logo-mark { width: auto; height: 38px; transition: height 0.5s var(--ease-expo); }
+.logo-word { width: auto; height: 14px; margin-top: 2px; transition: height 0.5s var(--ease-expo); }
+.nav__logo:hover .logo-lockup {
   transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(0, 16, 42, 0.42), inset 0 0 0 1px rgba(255, 255, 255, 0.95), 0 0 0 3px rgba(116, 216, 212, 0.35);
+  filter: brightness(2.05) saturate(1.18) drop-shadow(0 0 12px rgba(116, 216, 212, 0.6));
 }
-.nav.is-scrolled .logo-plate { padding: 0.34rem 0.7rem 0.34rem 0.5rem; }
-.nav.is-scrolled .logo-mark { height: 26px; }
-.nav.is-scrolled .logo-word { height: 10.5px; }
-.footer__brand .logo-plate { padding: 0.6rem 1.1rem 0.6rem 0.8rem; border-radius: 16px; }
-.footer__brand .logo-mark { height: 42px; }
-.footer__brand .logo-word { height: 16px; }
+.nav.is-scrolled .logo-mark { height: 32px; }
+.nav.is-scrolled .logo-word { height: 12px; }
+.footer__brand .logo-mark { height: 52px; }
+.footer__brand .logo-word { height: 19px; }
 @media (max-width: 640px) {
-  .logo-plate { gap: 0.45rem; padding: 0.36rem 0.62rem 0.36rem 0.46rem; border-radius: 12px; }
-  .logo-mark { height: 25px; }
-  .logo-word { height: 10px; }
-  .footer__brand .logo-mark { height: 34px; }
-  .footer__brand .logo-word { height: 13px; }
+  .logo-lockup { gap: 0.5rem; }
+  .logo-mark { height: 31px; }
+  .logo-word { height: 11.5px; }
+  .footer__brand .logo-mark { height: 42px; }
+  .footer__brand .logo-word { height: 15px; }
 }
 
 /* ---------- Preloader ---------- */
@@ -107,7 +106,7 @@
 .preloader__cols span:nth-child(odd) { background: var(--navy-950); }
 .preloader__inner { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(1.5rem, 4vw, 3rem) var(--gutter); }
 .preloader__logo { margin: auto; opacity: 0; }
-.logo-plate--lg { flex-direction: column; gap: clamp(0.8rem, 2vw, 1.4rem); padding: clamp(1.4rem, 3.4vw, 2.6rem) clamp(1.8rem, 4.2vw, 3.4rem); border-radius: clamp(18px, 2.4vw, 26px); }
+.logo-lockup--lg { flex-direction: column; gap: clamp(0.9rem, 2.2vw, 1.6rem); }
 .preloader__mark { width: auto; height: clamp(74px, 13vw, 150px); }
 .preloader__word { width: min(60vw, 400px); height: auto; }
 .preloader__meta { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.2em; font-size: var(--fs-mono); color: var(--on-dark-soft); }
@@ -216,9 +215,24 @@
 .footer__col a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: right; transition: transform 0.45s var(--ease-expo); }
 .footer__col a:hover { color: var(--on-dark); }
 .footer__col a:hover::after { transform: scaleX(1); transform-origin: left; }
-.footer__giant { display: flex; flex-wrap: wrap; gap: 0 0.22em; justify-content: center; font-family: var(--font-display); font-size: clamp(5rem, 19vw, 21rem); line-height: 1; letter-spacing: -0.03em; padding-block: clamp(2rem, 5vw, 4rem) 0; user-select: none; }
-.footer__giant-word { display: inline-block; color: transparent; -webkit-text-stroke: 1px rgba(245, 248, 255, 0.35); }
-.footer__giant-word--italic { font-style: italic; -webkit-text-stroke: 0; color: rgba(116, 216, 212, 0.55); }
+.footer__giant { display: flex; justify-content: center; padding-block: clamp(2rem, 5vw, 4rem) 0; user-select: none; overflow: hidden; }
+.footer__giant-line {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  /* sized so "Freight Nexus" always fits on one line, at any width */
+  font-size: min(13.2vw, 15rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(245, 248, 255, 0.34);
+}
+.footer__giant-line em {
+  font-style: italic;
+  margin-left: 0.14em;
+  -webkit-text-stroke: 0;
+  color: rgba(116, 216, 212, 0.5);
+}
 .footer__bottom { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-block: 1.5rem 2rem; border-top: 1px solid var(--line-dark); font-size: 0.82rem; color: var(--on-dark-mute); margin-top: -1px; }
 .footer__legal { display: flex; gap: 1.5rem; }
 .footer__credits { flex-basis: 100%; order: 3; margin-top: 0.4rem; font-size: 0.7rem; line-height: 1.6; color: rgba(245, 248, 255, 0.34); max-width: none; }
