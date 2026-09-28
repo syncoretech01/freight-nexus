@@ -54,17 +54,17 @@ export function initExplodeScene({ canvas, stage, section, labels, items, progre
   camera.lookAt(0, -0.3, 0);
 
   /* lights — cream key, rose fill, teal ambient */
-  scene.add(new THREE.HemisphereLight(0xfaf3ec, 0x123f40, 1.9));
-  const key = new THREE.DirectionalLight(0xfff4ea, 3.2);
+  scene.add(new THREE.HemisphereLight(0xf2f7ff, 0x102a4d, 1.9));
+  const key = new THREE.DirectionalLight(0xffffff, 3.2);
   key.position.set(7, 12, 9);
   scene.add(key);
-  const fill = new THREE.PointLight(0xe8a6b2, 120, 60, 1.7);
+  const fill = new THREE.PointLight(0x4da3ff, 140, 60, 1.7);
   fill.position.set(-10, 4, 10);
   scene.add(fill);
-  const back = new THREE.PointLight(0x6aa9a9, 60, 50, 1.6);
+  const back = new THREE.PointLight(0x7cbcff, 70, 50, 1.6);
   back.position.set(5, -2, -10);
   scene.add(back);
-  const under = new THREE.PointLight(0xe8a6b2, 30, 30, 1.8);
+  const under = new THREE.PointLight(0x1479e0, 40, 30, 1.8);
   under.position.set(2, -6, 6);
   scene.add(under);
 
@@ -72,17 +72,17 @@ export function initExplodeScene({ canvas, stage, section, labels, items, progre
   scene.add(rig);
 
   /* materials */
-  const shellMat = new THREE.MeshStandardMaterial({ color: 0x2f7c7e, metalness: 0.35, roughness: 0.48, bumpMap: corrugationTexture(14), bumpScale: 0.4 });
-  const endMat = new THREE.MeshStandardMaterial({ color: 0x2f7c7e, metalness: 0.35, roughness: 0.48, bumpMap: corrugationTexture(5), bumpScale: 0.4 });
-  const roofMat = new THREE.MeshStandardMaterial({ color: 0x286e70, metalness: 0.35, roughness: 0.5, bumpMap: corrugationTexture(14), bumpScale: 0.3 });
-  const frameMat = new THREE.MeshStandardMaterial({ color: 0x134546, metalness: 0.6, roughness: 0.35 });
-  const floorMat = new THREE.MeshStandardMaterial({ color: 0xb9a892, metalness: 0.05, roughness: 0.9 });
-  const cargoA = new THREE.MeshStandardMaterial({ color: 0xe8a6b2, roughness: 0.75 });
-  const cargoB = new THREE.MeshStandardMaterial({ color: 0xf0c2ca, roughness: 0.75 });
-  const cargoC = new THREE.MeshStandardMaterial({ color: 0xd98a98, roughness: 0.7 });
-  const unitMat = new THREE.MeshStandardMaterial({ color: 0x0a2c2d, metalness: 0.6, roughness: 0.3 });
-  const beaconMat = new THREE.MeshStandardMaterial({ color: 0xe8a6b2, emissive: 0xe8a6b2, emissiveIntensity: 2 });
-  const edgeMat = new THREE.LineBasicMaterial({ color: 0xf0c2ca, transparent: true, opacity: 0.55 });
+  const shellMat = new THREE.MeshStandardMaterial({ color: 0x1f5fa8, metalness: 0.38, roughness: 0.46, bumpMap: corrugationTexture(14), bumpScale: 0.4 });
+  const endMat = new THREE.MeshStandardMaterial({ color: 0x1f5fa8, metalness: 0.38, roughness: 0.46, bumpMap: corrugationTexture(5), bumpScale: 0.4 });
+  const roofMat = new THREE.MeshStandardMaterial({ color: 0x1a5395, metalness: 0.38, roughness: 0.5, bumpMap: corrugationTexture(14), bumpScale: 0.3 });
+  const frameMat = new THREE.MeshStandardMaterial({ color: 0x0c2b52, metalness: 0.62, roughness: 0.35 });
+  const floorMat = new THREE.MeshStandardMaterial({ color: 0xa8b4c6, metalness: 0.05, roughness: 0.9 });
+  const cargoA = new THREE.MeshStandardMaterial({ color: 0xd8e6f7, roughness: 0.78 });
+  const cargoB = new THREE.MeshStandardMaterial({ color: 0xeef4fc, roughness: 0.78 });
+  const cargoC = new THREE.MeshStandardMaterial({ color: 0xb6dbff, roughness: 0.72 });
+  const unitMat = new THREE.MeshStandardMaterial({ color: 0x071a35, metalness: 0.6, roughness: 0.3 });
+  const beaconMat = new THREE.MeshStandardMaterial({ color: 0x7cbcff, emissive: 0x4da3ff, emissiveIntensity: 2 });
+  const edgeMat = new THREE.LineBasicMaterial({ color: 0x9ccbff, transparent: true, opacity: 0.55 });
 
   const parts = [];
   function part(mesh, base, dir, dist, from, to, withEdges = true) {
@@ -105,7 +105,7 @@ export function initExplodeScene({ canvas, stage, section, labels, items, progre
   const beacon = new THREE.Mesh(new THREE.SphereGeometry(0.075, 16, 16), beaconMat);
   beacon.position.set(L * 0.28 + 0.2, T / 2 + 0.28, 0);
   roof.group.add(beacon);
-  const beaconGlow = new THREE.PointLight(0xe8a6b2, 0, 4, 2);
+  const beaconGlow = new THREE.PointLight(0x4da3ff, 0, 4, 2);
   beaconGlow.position.copy(beacon.position);
   roof.group.add(beaconGlow);
 
@@ -161,7 +161,7 @@ export function initExplodeScene({ canvas, stage, section, labels, items, progre
   const cargo = new THREE.Group();
   cargo.position.set(0, -H / 2 + T / 2, 0);
   rig.add(cargo);
-  const palletMat = new THREE.MeshStandardMaterial({ color: 0x8d7a64, roughness: 0.9 });
+  const palletMat = new THREE.MeshStandardMaterial({ color: 0x8a94a6, roughness: 0.9 });
   const positions = [-3.3, -1.1, 1.1, 3.3];
   positions.forEach((x, i) => {
     const pallet = box(1.9, 0.14, 2.4, palletMat);
@@ -170,7 +170,7 @@ export function initExplodeScene({ canvas, stage, section, labels, items, progre
     const h = 1.2 + (i % 2) * 0.5;
     const crate = box(1.7, h, 2.1, [cargoA, cargoB, cargoC, cargoB][i]);
     crate.position.set(x, 0.14 + h / 2, 0);
-    crate.add(new THREE.LineSegments(new THREE.EdgesGeometry(crate.geometry), new THREE.LineBasicMaterial({ color: 0x0a2c2d, transparent: true, opacity: 0.25 })));
+    crate.add(new THREE.LineSegments(new THREE.EdgesGeometry(crate.geometry), new THREE.LineBasicMaterial({ color: 0x071a35, transparent: true, opacity: 0.25 })));
     cargo.add(crate);
     if (i % 2 === 0) {
       const top = box(1.3, 0.5, 1.5, cargoC);

@@ -44,7 +44,33 @@ src/js/explode-scene.js Three.js exploded container
 src/js/*.js             one module per feature
 ```
 
-## Palette
+## Brand
 
-Deep teal `#0a2c2d / #0f3b3c`, dusty rose `#e8a6b2 / #d98a98`, cream `#f7f1ea / #fcf9f5` — sampled from the brand reference.
-Type: Instrument Serif (display) · Manrope (body) · DM Mono (labels).
+Colours are sampled directly from the Freight Nexus logo:
+
+| Role | Token | Hex |
+| --- | --- | --- |
+| Deepest ground | `--navy-950` | `#04101f` |
+| Primary dark / ink | `--navy-900` | `#071a35` |
+| Raised dark surface | `--navy-800` | `#0b2749` |
+| Brand blue (logo) | `--blue-500` | `#1479e0` |
+| Accent on dark | `--blue-400` | `#4da3ff` |
+| Tint / light surface | `--blue-100` | `#e0efff` |
+| Page paper | `--ice-100` | `#eff4fb` |
+
+Type: Instrument Serif (editorial display) · Manrope (body) · DM Mono (labels).
+
+### Logo assets — `public/brand/`
+
+| File | Use |
+| --- | --- |
+| `logo-mark-light.*` / `logo-wordmark-light.*` | nav, footer, preloader (on navy) |
+| `logo-mark.*` / `logo-wordmark.*` | originals, for light backgrounds |
+| `logo-full.*` / `logo-full-light.*` | stacked lockup |
+| `icon-mark.png` | favicon fallback + apple-touch-icon |
+| `og-card.jpg` | social share card |
+
+The `-light` variants are recoloured from the master art: the navy half is mapped
+onto a white→ice ramp that keeps its original shading, and the blue half stays
+saturated, so the mark holds its two-tone identity on the dark ground.
+`.webp` is served with a `.png` fallback via `<picture>`.

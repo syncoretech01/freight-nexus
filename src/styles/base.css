@@ -1,45 +1,46 @@
 /* =========================================================
    FREIGHT NEXUS — Design tokens & base
-   Palette extracted from the reference: deep teal, dusty rose, cream
+   Palette sampled from the Freight Nexus logo:
+   deep navy (#001838-#004080), brand blue (#0058b0-#0060c8), ice white
    ========================================================= */
 
 :root {
-  /* Teal scale */
-  --teal-950: #061e1e;
-  --teal-900: #0a2c2d;
-  --teal-800: #0f3b3c;
-  --teal-700: #154a4b;
-  --teal-600: #1e5c5d;
-  --teal-500: #2a7072;
-  --teal-400: #3e8a8b;
-  --teal-300: #6aa9a9;
+  /* Navy scale — the logo's dark half */
+  --navy-950: #04101f;
+  --navy-900: #071a35;
+  --navy-800: #0b2749;
+  --navy-700: #10355f;
+  --navy-600: #16457a;
+  --navy-500: #1d579b;
+  --navy-400: #2f6fc0;
+  --navy-300: #5b93d8;
 
-  /* Rose scale */
-  --rose-700: #b05f6f;
-  --rose-600: #c4707f;
-  --rose-500: #d98a98;
-  --rose-400: #e8a6b2;
-  --rose-300: #f0c2ca;
-  --rose-200: #f6dce1;
-  --rose-100: #faedef;
+  /* Brand blue scale — the logo's bright half */
+  --blue-700: #0b5bb5;
+  --blue-600: #0d68cc;
+  --blue-500: #1479e0;
+  --blue-400: #4da3ff;
+  --blue-300: #7cbcff;
+  --blue-200: #b6dbff;
+  --blue-100: #e0efff;
 
-  /* Cream scale */
-  --cream-300: #e6d9cc;
-  --cream-200: #efe5db;
-  --cream-100: #f7f1ea;
-  --cream-50: #fcf9f5;
+  /* Ice scale — cool neutrals */
+  --ice-300: #cfdff2;
+  --ice-200: #e3edf9;
+  --ice-100: #eff4fb;
+  --ice-50: #f7faff;
 
   /* Semantic */
-  --ink: var(--teal-900);
-  --ink-soft: rgba(10, 44, 45, 0.68);
-  --ink-mute: rgba(10, 44, 45, 0.45);
-  --paper: var(--cream-100);
-  --paper-soft: var(--cream-50);
-  --on-dark: var(--cream-50);
-  --on-dark-soft: rgba(252, 249, 245, 0.7);
-  --on-dark-mute: rgba(252, 249, 245, 0.42);
-  --line: rgba(10, 44, 45, 0.12);
-  --line-dark: rgba(252, 249, 245, 0.14);
+  --ink: var(--navy-900);
+  --ink-soft: rgba(7, 26, 53, 0.68);
+  --ink-mute: rgba(7, 26, 53, 0.45);
+  --paper: var(--ice-100);
+  --paper-soft: var(--ice-50);
+  --on-dark: var(--ice-50);
+  --on-dark-soft: rgba(247, 250, 255, 0.7);
+  --on-dark-mute: rgba(247, 250, 255, 0.45);
+  --line: rgba(7, 26, 53, 0.12);
+  --line-dark: rgba(247, 250, 255, 0.14);
 
   /* Type */
   --font-display: 'Instrument Serif', 'Playfair Display', 'Times New Roman', Georgia, serif;
@@ -103,8 +104,8 @@ ul, ol { list-style: none; }
 button, input, textarea, select { font: inherit; color: inherit; background: none; border: 0; }
 button { cursor: pointer; }
 address { font-style: normal; }
-::selection { background: var(--rose-400); color: var(--teal-900); }
-:focus-visible { outline: 2px solid var(--rose-500); outline-offset: 3px; border-radius: 4px; }
+::selection { background: var(--blue-400); color: var(--navy-900); }
+:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 3px; border-radius: 4px; }
 @media (hover: hover) and (pointer: fine) { body { cursor: none; } a, button, label, input, textarea, summary { cursor: none; } }
 
 /* ---------- Typography helpers ---------- */
@@ -121,11 +122,11 @@ strong { font-weight: 600; }
   font-size: var(--fs-mono);
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--teal-500);
+  color: var(--navy-500);
   font-weight: 500;
 }
 .eyebrow::before { content: ''; width: 28px; height: 1px; background: currentColor; opacity: 0.7; }
-.eyebrow--rose { color: var(--rose-400); }
+.eyebrow--accent { color: var(--blue-400); }
 .eyebrow--light { color: var(--on-dark-soft); }
 
 .section-title {
@@ -134,9 +135,9 @@ strong { font-weight: 600; }
   margin-top: 1.4rem;
   text-wrap: balance;
 }
-.section-title em { color: var(--rose-600); }
+.section-title em { color: var(--blue-600); }
 .section-title--light { color: var(--on-dark); }
-.section-title--light em { color: var(--rose-400); }
+.section-title--light em { color: var(--blue-400); }
 
 .section-lead {
   margin-top: 1.6rem;
@@ -165,8 +166,8 @@ strong { font-weight: 600; }
 /* ---------- Layout helpers ---------- */
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
 .section { position: relative; padding-block: var(--section-y); }
-.section--dark { background: var(--teal-900); color: var(--on-dark); }
-.section--rose { background: var(--rose-100); }
+.section--dark { background: var(--navy-900); color: var(--on-dark); }
+.section--tint { background: var(--blue-100); }
 .grain-overlay { pointer-events: none; position: absolute; inset: 0; opacity: 0.08; mix-blend-mode: overlay; }
 
 /* Global noise texture (subtle film grain over dark sections) */

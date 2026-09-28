@@ -5,11 +5,11 @@ import { gsap, ScrollTrigger, isTouch, isDesktop, reducedMotion } from './core.j
 // Custom shaders write colors straight to the framebuffer, so keep them in sRGB values.
 const srgb = (hex) => new THREE.Color(hex).convertLinearToSRGB();
 const COLORS = {
-  cream: srgb('#f7f1ea'),
-  rose: srgb('#e8a6b2'),
-  roseDeep: srgb('#d98a98'),
-  teal: srgb('#6aa9a9'),
-  tealDeep: srgb('#0c3536'),
+  ice: srgb('#f7faff'),
+  blue: srgb('#4da3ff'),
+  blueDeep: srgb('#1479e0'),
+  steel: srgb('#5b93d8'),
+  navyDeep: srgb('#0a2247'),
 };
 
 const pointVertex = /* glsl */ `
@@ -145,7 +145,7 @@ export function initHeroScene(canvas) {
   const rimMat = new THREE.ShaderMaterial({
     vertexShader: rimVertex,
     fragmentShader: rimFragment,
-    uniforms: { uBase: { value: COLORS.tealDeep }, uRim: { value: COLORS.rose }, uOpacity: { value: 0 } },
+    uniforms: { uBase: { value: COLORS.navyDeep }, uRim: { value: COLORS.blue }, uOpacity: { value: 0 } },
     transparent: true,
   });
   globe.add(new THREE.Mesh(new THREE.SphereGeometry(R * 0.965, 64, 64), rimMat));
@@ -167,7 +167,7 @@ export function initHeroScene(canvas) {
   for (let i = 0; i < N; i++) {
     pos.set([pts[i].x, pts[i].y, pts[i].z], i * 3);
     const r = Math.random();
-    const c = r < 0.14 ? COLORS.rose : r < 0.3 ? COLORS.teal : COLORS.cream;
+    const c = r < 0.18 ? COLORS.blue : r < 0.34 ? COLORS.steel : COLORS.ice;
     col.set([c.r, c.g, c.b], i * 3);
     size[i] = 0.55 + Math.pow(Math.random(), 2.2) * 1.9;
     seed[i] = Math.random();
@@ -195,7 +195,7 @@ export function initHeroScene(canvas) {
   }
   const gGeo = new THREE.BufferGeometry();
   gGeo.setAttribute('position', new THREE.Float32BufferAttribute(gratVerts, 3));
-  const gMat = new THREE.LineBasicMaterial({ color: COLORS.teal, transparent: true, opacity: 0 });
+  const gMat = new THREE.LineBasicMaterial({ color: COLORS.steel, transparent: true, opacity: 0 });
   globe.add(new THREE.LineSegments(gGeo, gMat));
 
   /* --- route arcs between hubs --- */
@@ -225,7 +225,7 @@ export function initHeroScene(canvas) {
   const aMat = new THREE.ShaderMaterial({
     vertexShader: arcVertex,
     fragmentShader: arcFragment,
-    uniforms: { uTime: uniforms.uTime, uOpacity: uniforms.uOpacity, uColorA: { value: COLORS.roseDeep }, uColorB: { value: COLORS.cream } },
+    uniforms: { uTime: uniforms.uTime, uOpacity: uniforms.uOpacity, uColorA: { value: COLORS.blueDeep }, uColorB: { value: COLORS.ice } },
     transparent: true,
     depthWrite: false,
     blending: THREE.AdditiveBlending,
@@ -237,7 +237,7 @@ export function initHeroScene(canvas) {
   const bPos = new Float32Array(H * 3), bCol = new Float32Array(H * 3), bSize = new Float32Array(H), bSeed = new Float32Array(H);
   hubs.forEach((h, i) => {
     bPos.set([h.x, h.y, h.z], i * 3);
-    bCol.set([COLORS.rose.r, COLORS.rose.g, COLORS.rose.b], i * 3);
+    bCol.set([COLORS.blue.r, COLORS.blue.g, COLORS.blue.b], i * 3);
     bSize[i] = 2.4 + Math.random() * 1.2;
     bSeed[i] = Math.random();
   });
@@ -249,7 +249,7 @@ export function initHeroScene(canvas) {
   for (let i = 0; i < D; i++) {
     const v = new THREE.Vector3().randomDirection().multiplyScalar(R * (1.4 + Math.random() * 1.6));
     dPos.set([v.x, v.y, v.z], i * 3);
-    const c = Math.random() < 0.5 ? COLORS.rose : COLORS.cream;
+    const c = Math.random() < 0.5 ? COLORS.blue : COLORS.ice;
     dCol.set([c.r, c.g, c.b], i * 3);
     dSize[i] = 0.4 + Math.random() * 1.1;
     dSeed[i] = Math.random();
@@ -322,7 +322,7 @@ export function initHeroScene(canvas) {
     dust.rotation.z = t * 0.01;
     const opacity = state.introOpacity * (1 - scrollState.p * 0.9);
     uniforms.uOpacity.value = opacity;
-    gMat.opacity = 0.16 * opacity;
+    gMat.opacity = 0.18 * opacity;
     rimMat.uniforms.uOpacity.value = opacity;
     globe.position.y = scrollState.p * 1.8 + Math.sin(t * 0.6) * 0.05;
     renderer.render(scene, camera);

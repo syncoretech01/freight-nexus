@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Freight Nexus — Intermodal, Grain & General Freight Brokerage</title>
   <meta name="description" content="Freight Nexus connects shippers with vetted intermodal, grain and general freight capacity across North America — with real-time visibility from first mile to last." />
-  <meta name="theme-color" content="#0A2C2D" />
+  <meta name="theme-color" content="#071a35" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Freight Nexus — Moving what matters, across every mile." />
   <meta property="og:description" content="Intermodal, grain and general freight brokerage with vetted capacity and real-time visibility across North America." />
-  <meta property="og:image" content="/images/hero-truck.jpg" />
+  <meta property="og:image" content="/brand/og-card.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/brand/icon-mark.png" type="image/png" sizes="512x512" />
+  <link rel="apple-touch-icon" href="/brand/icon-mark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="/images/hero-truck.jpg" />
+  <link rel="preload" as="image" href="/brand/logo-mark-light.webp" type="image/webp" />
+  <link rel="preload" as="image" href="/brand/logo-wordmark-light.webp" type="image/webp" />
 </head>
 <body>
 
@@ -25,8 +30,8 @@
     </div>
     <div class="preloader__inner">
       <div class="preloader__logo">
-        <span class="preloader__word" data-preload-word>Freight</span>
-        <span class="preloader__word preloader__word--italic" data-preload-word>Nexus</span>
+        <picture><source srcset="/brand/logo-mark-light.webp" type="image/webp" /><img class="preloader__mark" src="/brand/logo-mark-light.png" alt="" width="522" height="384" /></picture>
+        <picture><source srcset="/brand/logo-wordmark-light.webp" type="image/webp" /><img class="preloader__word" src="/brand/logo-wordmark-light.png" alt="Freight Nexus" width="1040" height="73" /></picture>
       </div>
       <div class="preloader__meta">
         <span class="preloader__tag">Intermodal &nbsp;·&nbsp; Grain &nbsp;·&nbsp; General Freight</span>
@@ -46,14 +51,8 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#home" class="nav__logo" data-scroll-to aria-label="Freight Nexus — home">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 44 44" fill="none">
-            <path class="logo-mark__path" d="M11 33V11L33 33V11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle class="logo-mark__node" cx="11" cy="11" r="3.4" fill="currentColor"/>
-            <circle class="logo-mark__node" cx="33" cy="33" r="3.4" fill="currentColor"/>
-          </svg>
-        </span>
-        <span class="logo-type">Freight<em>Nexus</em></span>
+        <picture><source srcset="/brand/logo-mark-light.webp" type="image/webp" /><img class="logo-mark" src="/brand/logo-mark-light.png" alt="" width="522" height="384" decoding="async" /></picture>
+        <picture><source srcset="/brand/logo-wordmark-light.webp" type="image/webp" /><img class="logo-word" src="/brand/logo-wordmark-light.png" alt="Freight Nexus" width="1040" height="73" decoding="async" /></picture>
       </a>
 
       <nav class="nav__links" aria-label="Primary">
@@ -65,7 +64,7 @@
       </nav>
 
       <div class="nav__actions">
-        <a href="#contact" class="btn btn--rose btn--sm" data-scroll-to data-magnetic>
+        <a href="#contact" class="btn btn--accent btn--sm" data-scroll-to data-magnetic>
           <span class="btn__label">Request a quote</span>
           <span class="btn__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -120,7 +119,7 @@
       <div class="hero__inner container">
         <div class="hero__content">
           <div class="hero__eyebrow" data-hero="eyebrow">
-            <span class="eyebrow eyebrow--rose">Intermodal &nbsp;·&nbsp; Grain &nbsp;·&nbsp; General Freight</span>
+            <span class="eyebrow eyebrow--accent">Intermodal &nbsp;·&nbsp; Grain &nbsp;·&nbsp; General Freight</span>
           </div>
           <h1 class="hero__title" id="hero-title">
             <span class="hero__line">Moving what</span>
@@ -133,7 +132,7 @@
             with real-time visibility from first mile to last.
           </p>
           <div class="hero__actions" data-hero="actions">
-            <a href="#contact" class="btn btn--rose" data-scroll-to data-magnetic>
+            <a href="#contact" class="btn btn--accent" data-scroll-to data-magnetic>
               <span class="btn__label">Get a quote</span>
               <span class="btn__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -170,7 +169,7 @@
           <div class="zoom__shade"></div>
         </div>
         <div class="zoom__caption" id="zoom-caption">
-          <span class="eyebrow eyebrow--rose">First mile to last</span>
+          <span class="eyebrow eyebrow--accent">First mile to last</span>
           <h2>Every mile,<br /><em>accounted for.</em></h2>
         </div>
         <div class="zoom__manifesto" id="zoom-manifesto">
@@ -295,7 +294,7 @@
       <div class="explode__sticky">
         <div class="explode__grid container">
           <div class="explode__text">
-            <span class="eyebrow eyebrow--rose" data-reveal>Inside every load</span>
+            <span class="eyebrow eyebrow--accent" data-reveal>Inside every load</span>
             <h2 class="section-title section-title--light" data-split>Engineered for<br /><em>the whole journey.</em></h2>
             <p class="section-lead section-lead--light" data-reveal>
               Scroll to open a Freight Nexus container. Every layer is a promise we make on every shipment.
@@ -373,7 +372,7 @@
               <figcaption>Elevator · Kansas</figcaption>
             </figure>
             <div class="journey__copy" data-speed="0.8">
-              <span class="eyebrow eyebrow--rose">Stage 01 — Origin</span>
+              <span class="eyebrow eyebrow--accent">Stage 01 — Origin</span>
               <h3>Elevator &amp; dock</h3>
               <p>Capacity confirmed within two hours. The driver arrives with a digital BOL already in hand and the load is weighed, sealed and rolling before lunch.</p>
               <ul class="journey__meta"><li>2 hr capacity confirmation</li><li>Digital BOL &amp; scale ticket</li></ul>
@@ -388,7 +387,7 @@
               <figcaption>Intermodal ramp · Chicago</figcaption>
             </figure>
             <div class="journey__copy" data-speed="0.8">
-              <span class="eyebrow eyebrow--rose">Stage 02 — Rail</span>
+              <span class="eyebrow eyebrow--accent">Stage 02 — Rail</span>
               <h3>Intermodal ramp</h3>
               <p>Containers are lifted onto double-stack trains — four times the fuel efficiency of long-haul trucking, with every lift timestamped on your dashboard.</p>
               <ul class="journey__meta"><li>4× fuel efficiency</li><li>Class I rail partners</li></ul>
@@ -403,7 +402,7 @@
               <figcaption>Ocean gateway · Savannah</figcaption>
             </figure>
             <div class="journey__copy" data-speed="0.8">
-              <span class="eyebrow eyebrow--rose">Stage 03 — Port</span>
+              <span class="eyebrow eyebrow--accent">Stage 03 — Port</span>
               <h3>Ocean gateway</h3>
               <p>Customs pre-cleared, chassis pre-staged, appointment locked. Nothing waits at the terminal — and demurrage never lands on your invoice.</p>
               <ul class="journey__meta"><li>Pre-cleared customs</li><li>Zero demurrage guarantee</li></ul>
@@ -418,7 +417,7 @@
               <figcaption>Final mile · Denver</figcaption>
             </figure>
             <div class="journey__copy" data-speed="0.8">
-              <span class="eyebrow eyebrow--rose">Stage 04 — Delivery</span>
+              <span class="eyebrow eyebrow--accent">Stage 04 — Delivery</span>
               <h3>Final mile</h3>
               <p>Delivered, signed and invoiced — with proof of delivery in your inbox before the truck has left the dock.</p>
               <ul class="journey__meta"><li>Instant POD</li><li>Same-day invoicing</li></ul>
@@ -428,7 +427,7 @@
           <article class="journey__panel journey__panel--end">
             <div class="journey__end">
               <h3>Delivered.<br /><em>Documented.</em><br />Done.</h3>
-              <a href="#contact" class="btn btn--teal" data-scroll-to data-magnetic>
+              <a href="#contact" class="btn btn--navy" data-scroll-to data-magnetic>
                 <span class="btn__label">Start your first load</span>
                 <span class="btn__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -454,7 +453,7 @@
         </header>
       </div>
       <div class="process__stack container" id="process-stack">
-        <article class="process__card process__card--teal" data-card="1">
+        <article class="process__card process__card--navy" data-card="1">
           <div class="process__card-inner">
             <div class="process__card-text">
               <span class="process__step">Step 01</span>
@@ -468,7 +467,7 @@
             </div>
           </div>
         </article>
-        <article class="process__card process__card--rose" data-card="2">
+        <article class="process__card process__card--accent" data-card="2">
           <div class="process__card-inner">
             <div class="process__card-text">
               <span class="process__step">Step 02</span>
@@ -496,7 +495,7 @@
             </div>
           </div>
         </article>
-        <article class="process__card process__card--cream" data-card="4">
+        <article class="process__card process__card--ice" data-card="4">
           <div class="process__card-inner">
             <div class="process__card-text">
               <span class="process__step">Step 04</span>
@@ -518,7 +517,7 @@
       <div class="container">
         <header class="section-head section-head--split">
           <div>
-            <span class="eyebrow eyebrow--rose" data-reveal>The network</span>
+            <span class="eyebrow eyebrow--accent" data-reveal>The network</span>
             <h2 class="section-title section-title--light" data-split>Reaching everywhere<br /><em>you ship.</em></h2>
           </div>
           <p class="section-lead section-lead--light" data-reveal>
@@ -632,7 +631,7 @@
     </section>
 
     <!-- ============================== TESTIMONIALS (3D SLIDER) ============================== -->
-    <section class="testimonials section section--rose" id="testimonials">
+    <section class="testimonials section section--tint" id="testimonials">
       <div class="container">
         <header class="section-head section-head--center">
           <span class="eyebrow" data-reveal>Client stories</span>
@@ -735,7 +734,7 @@
       <div class="contact__bg" aria-hidden="true"><img src="/images/port-aerial.jpg" alt="" loading="lazy" data-parallax="0.15" /></div>
       <div class="container contact__grid">
         <div class="contact__info">
-          <span class="eyebrow eyebrow--rose" data-reveal>Request a quote</span>
+          <span class="eyebrow eyebrow--accent" data-reveal>Request a quote</span>
           <h2 class="section-title section-title--light" data-split>Let's move<br /><em>your freight.</em></h2>
           <p class="section-lead section-lead--light" data-reveal>
             Tell us about the lane and we'll come back with all-in pricing, usually within 15 minutes.
@@ -796,7 +795,7 @@
           </label>
 
           <div class="form__footer">
-            <button type="submit" class="btn btn--rose btn--lg" id="form-submit" data-magnetic>
+            <button type="submit" class="btn btn--accent btn--lg" id="form-submit" data-magnetic>
               <span class="btn__label">Send request</span>
               <span class="btn__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -822,15 +821,9 @@
       <div class="footer__top">
         <div class="footer__brand">
           <a href="#home" class="nav__logo" data-scroll-to aria-label="Freight Nexus — home">
-            <span class="logo-mark" aria-hidden="true">
-              <svg viewBox="0 0 44 44" fill="none">
-                <path d="M11 33V11L33 33V11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="11" cy="11" r="3.4" fill="currentColor"/>
-                <circle cx="33" cy="33" r="3.4" fill="currentColor"/>
-              </svg>
-            </span>
-            <span class="logo-type">Freight<em>Nexus</em></span>
-          </a>
+            <picture><source srcset="/brand/logo-mark-light.webp" type="image/webp" /><img class="logo-mark" src="/brand/logo-mark-light.png" alt="" width="522" height="384" decoding="async" /></picture>
+            <picture><source srcset="/brand/logo-wordmark-light.webp" type="image/webp" /><img class="logo-word" src="/brand/logo-wordmark-light.png" alt="Freight Nexus" width="1040" height="73" decoding="async" /></picture>
+      </a>
           <p>Intermodal, grain and general freight brokerage. Based in Apple Valley, California — moving freight North America-wide.</p>
           <form class="footer__news" id="footer-news">
             <input type="email" placeholder="Lane insights, monthly" aria-label="Email address" />
