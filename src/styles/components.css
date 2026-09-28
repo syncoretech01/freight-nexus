@@ -66,37 +66,37 @@
 .btn--lg .btn__icon { width: 3rem; height: 3rem; }
 
 /* ---------- Logo ----------
-   The supplied artwork is used untouched on a transparent background. Because
-   the mark is navy + blue and the site ground is navy, it is rendered with a
-   brightness lift and a faint aqua glow so the dark half reads — the colour
-   relationship of the original is preserved, nothing is recoloured, and the
-   asset files themselves are unmodified. */
+   The mark is supplied as navy + bright blue, which goes muddy on a navy
+   ground. The on-site asset is a proper reversal of that same artwork: each
+   tonal half repainted flat — white for the navy half, brand aqua for the blue
+   half — at full source resolution, so it stays crisp at any size and needs no
+   filters or plate. logo-*-onlight.* keeps the untouched original for light
+   backgrounds. */
 .nav__logo { display: inline-flex; align-items: center; line-height: 0; }
 .logo-lockup {
   display: inline-flex;
   align-items: center;
-  gap: 0.62rem;
+  gap: 0.66rem;
   line-height: 0;
-  filter: brightness(1.85) saturate(1.12) drop-shadow(0 0 6px rgba(116, 216, 212, 0.34));
-  transition: filter 0.45s var(--ease-expo), transform 0.6s var(--ease-expo);
+  transition: transform 0.6s var(--ease-expo), filter 0.45s var(--ease-expo);
   will-change: transform;
 }
-.logo-mark { width: auto; height: 38px; transition: height 0.5s var(--ease-expo); }
-.logo-word { width: auto; height: 14px; margin-top: 2px; transition: height 0.5s var(--ease-expo); }
+.logo-mark { width: auto; height: 36px; transition: height 0.5s var(--ease-expo); }
+.logo-word { width: auto; height: 13px; margin-top: 2px; transition: height 0.5s var(--ease-expo); }
 .nav__logo:hover .logo-lockup {
   transform: translateY(-2px);
-  filter: brightness(2.05) saturate(1.18) drop-shadow(0 0 12px rgba(116, 216, 212, 0.6));
+  filter: drop-shadow(0 6px 18px rgba(116, 216, 212, 0.42));
 }
-.nav.is-scrolled .logo-mark { height: 32px; }
-.nav.is-scrolled .logo-word { height: 12px; }
-.footer__brand .logo-mark { height: 52px; }
-.footer__brand .logo-word { height: 19px; }
+.nav.is-scrolled .logo-mark { height: 31px; }
+.nav.is-scrolled .logo-word { height: 11.5px; }
+.footer__brand .logo-mark { height: 50px; }
+.footer__brand .logo-word { height: 18px; }
 @media (max-width: 640px) {
   .logo-lockup { gap: 0.5rem; }
-  .logo-mark { height: 31px; }
-  .logo-word { height: 11.5px; }
-  .footer__brand .logo-mark { height: 42px; }
-  .footer__brand .logo-word { height: 15px; }
+  .logo-mark { height: 30px; }
+  .logo-word { height: 11px; }
+  .footer__brand .logo-mark { height: 40px; }
+  .footer__brand .logo-word { height: 14.5px; }
 }
 
 /* ---------- Preloader ---------- */
@@ -235,9 +235,6 @@
 }
 .footer__bottom { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-block: 1.5rem 2rem; border-top: 1px solid var(--line-dark); font-size: 0.82rem; color: var(--on-dark-mute); margin-top: -1px; }
 .footer__legal { display: flex; gap: 1.5rem; }
-.footer__credits { flex-basis: 100%; order: 3; margin-top: 0.4rem; font-size: 0.7rem; line-height: 1.6; color: rgba(245, 248, 255, 0.34); max-width: none; }
-.footer__credits a { border-bottom: 1px solid rgba(245, 248, 255, 0.22); }
-.footer__credits a:hover { color: var(--accent); border-color: var(--accent); }
 .footer__legal a:hover { color: var(--accent); }
 .footer__top-btn { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--on-dark); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em; }
 .footer__top-btn svg { width: 36px; height: 36px; padding: 8px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(245, 248, 255, 0.3); transition: background 0.4s, transform 0.5s var(--ease-expo); }

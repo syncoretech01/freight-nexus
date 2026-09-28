@@ -65,39 +65,35 @@ per level) · **Inter Tight** (body) · **DM Mono** (labels).
 
 ### Logo assets — `public/brand/`
 
-The logo is used exactly as supplied — the asset files are unmodified and sit
-on a transparent background. Because the site ground is navy and the mark is
-navy + blue, `.logo-lockup` renders it with a CSS brightness lift and a faint
-aqua glow so the dark half reads. Nothing is recoloured: the original
-navy → blue relationship is preserved, and the same files drop straight onto a
-light background unchanged.
+The supplied mark is navy + bright blue, which goes muddy on a navy ground. The
+on-site set is a true reversal of that same artwork: each tonal half repainted
+**flat** at full source resolution — white for the navy half, brand aqua for the
+blue half — keeping the original alpha, so it is crisp at any size and needs no
+plate, filter or glow. The untouched original is kept for light backgrounds.
 
 | File | Use |
 | --- | --- |
-| `logo-mark.*` | the mark, in the nav / footer / preloader plate |
-| `logo-wordmark.*` | the wordmark beside it |
+| `logo-mark.*` / `logo-wordmark.*` | on-site lockup (white + aqua, transparent) |
 | `logo-full.*` | stacked lockup |
-| `icon-16/32/48.png` | browser tab icons (transparent) |
-| `icon-180.png` | apple-touch-icon (opaque navy — iOS composites transparency onto black) |
-| `icon-512.png` | large icon / PWA |
+| `logo-*-onlight.*` | the untouched original, for light backgrounds / print |
+| `icon-16/32/48/64.png` | browser tab icons (navy tile so they read on any tab colour) |
+| `icon-180.png` / `icon-512.png` | apple-touch-icon / PWA |
 | `og-card.jpg` | social share card |
 
 `.webp` is served with a `.png` fallback via `<picture>`.
 
 ## Photography
 
-US-only subjects. Everything is either Unsplash-licensed or permissively
-licensed with credit given in the footer:
+US subjects only, and every image is attribution-free — Unsplash License, or
+CC0/public domain — so the site carries no credits line.
 
 | Image | Source | Licence |
 | --- | --- | --- |
-| `freight-train.jpg` — J.B. Hunt intermodal on BNSF | Wikideas1 | CC0 |
-| `rail-loop.jpg` — Tehachapi Loop | David Brossard | CC BY-SA 2.0 |
-| `truck-reefer.jpg` — May Trucking Freightliner | Ewkada | CC BY 4.0 |
+| `freight-train.jpg` — J.B. Hunt intermodal on BNSF | Wikimedia (Wikideas1) | CC0 |
 | everything else | Unsplash | Unsplash License |
 
 Each photo ships as WebP with a JPEG fallback, capped at ~2x its largest
-on-screen size (2.3 MB of WebP across the whole page, nearly all lazy-loaded).
+on-screen size, and everything below the fold is lazy-loaded.
 
 ## Network map
 
