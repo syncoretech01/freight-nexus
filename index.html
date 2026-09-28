@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Freight Nexus — Intermodal, Grain & General Freight Brokerage</title>
   <meta name="description" content="Freight Nexus connects shippers with vetted intermodal, grain and general freight capacity across North America — with real-time visibility from first mile to last." />
-  <meta name="theme-color" content="#071a35" />
+  <meta name="theme-color" content="#001838" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Freight Nexus — Moving what matters, across every mile." />
   <meta property="og:description" content="Intermodal, grain and general freight brokerage with vetted capacity and real-time visibility across North America." />
@@ -16,10 +16,11 @@
   <link rel="apple-touch-icon" href="/brand/icon-mark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="preload" as="image" href="/images/hero-truck.jpg" />
-  <link rel="preload" as="image" href="/brand/logo-mark-light.webp" type="image/webp" />
-  <link rel="preload" as="image" href="/brand/logo-wordmark-light.webp" type="image/webp" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter+Tight:wght@300..700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/images/hero-truck.webp" type="image/webp" />
+  <link rel="preload" as="image" href="/brand/logo-mark.webp" type="image/webp" />
+  <link rel="preload" as="image" href="/brand/logo-wordmark.webp" type="image/webp" />
 </head>
 <body>
 
@@ -30,8 +31,10 @@
     </div>
     <div class="preloader__inner">
       <div class="preloader__logo">
-        <picture><source srcset="/brand/logo-mark-light.webp" type="image/webp" /><img class="preloader__mark" src="/brand/logo-mark-light.png" alt="" width="522" height="384" /></picture>
-        <picture><source srcset="/brand/logo-wordmark-light.webp" type="image/webp" /><img class="preloader__word" src="/brand/logo-wordmark-light.png" alt="Freight Nexus" width="1040" height="73" /></picture>
+        <span class="logo-plate logo-plate--lg">
+          <picture><source srcset="/brand/logo-mark.webp" type="image/webp" /><img class="preloader__mark" src="/brand/logo-mark.png" alt="" width="544" height="400" /></picture>
+          <picture><source srcset="/brand/logo-wordmark.webp" type="image/webp" /><img class="preloader__word" src="/brand/logo-wordmark.png" alt="Freight Nexus" width="1040" height="73" /></picture>
+        </span>
       </div>
       <div class="preloader__meta">
         <span class="preloader__tag">Intermodal &nbsp;·&nbsp; Grain &nbsp;·&nbsp; General Freight</span>
@@ -51,9 +54,11 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#home" class="nav__logo" data-scroll-to aria-label="Freight Nexus — home">
-        <picture><source srcset="/brand/logo-mark-light.webp" type="image/webp" /><img class="logo-mark" src="/brand/logo-mark-light.png" alt="" width="522" height="384" decoding="async" /></picture>
-        <picture><source srcset="/brand/logo-wordmark-light.webp" type="image/webp" /><img class="logo-word" src="/brand/logo-wordmark-light.png" alt="Freight Nexus" width="1040" height="73" decoding="async" /></picture>
-      </a>
+          <span class="logo-plate">
+            <picture><source srcset="/brand/logo-mark.webp" type="image/webp" /><img class="logo-mark" src="/brand/logo-mark.png" alt="" width="544" height="400" decoding="async" /></picture>
+            <picture><source srcset="/brand/logo-wordmark.webp" type="image/webp" /><img class="logo-word" src="/brand/logo-wordmark.png" alt="Freight Nexus" width="1040" height="73" decoding="async" /></picture>
+          </span>
+        </a>
 
       <nav class="nav__links" aria-label="Primary">
         <a href="#services" class="nav__link" data-scroll-to><span data-text="Services">Services</span></a>
@@ -79,7 +84,7 @@
 
   <!-- ============================== FULLSCREEN MENU ============================== -->
   <div class="menu" id="menu" aria-hidden="true">
-    <div class="menu__bg"><img src="/images/truck-bw.jpg" alt="" /></div>
+    <div class="menu__bg"><picture><source srcset="/images/truck-bw.webp" type="image/webp" /><img src="/images/truck-bw.jpg" alt="" /></picture></div>
     <div class="menu__inner">
       <nav class="menu__links" aria-label="Menu">
         <a href="#services" class="menu__link" data-scroll-to><span class="menu__num">01</span><span class="menu__text">Services</span></a>
@@ -165,7 +170,7 @@
     <section class="zoom" id="zoom">
       <div class="zoom__sticky">
         <div class="zoom__frame" id="zoom-frame">
-          <img src="/images/hero-truck.jpg" alt="Freight Nexus semi truck on the highway at sunset" id="zoom-img" />
+          <picture><source srcset="/images/hero-truck.webp" type="image/webp" /><img src="/images/hero-truck.jpg" alt="Freight Nexus semi truck on the highway at sunset" id="zoom-img" /></picture>
           <div class="zoom__shade"></div>
         </div>
         <div class="zoom__caption" id="zoom-caption">
@@ -230,7 +235,7 @@
               </ul>
             </div>
             <div class="services__media">
-              <img src="/images/container-yard.jpg" alt="Aerial view of an intermodal container yard" loading="lazy" />
+              <picture><source srcset="/images/container-yard.webp" type="image/webp" /><img src="/images/container-yard.jpg" alt="Aerial view of an intermodal container yard" loading="lazy" /></picture>
             </div>
             <span class="services__arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -250,7 +255,7 @@
               </ul>
             </div>
             <div class="services__media">
-              <img src="/images/wheat-field.jpg" alt="Golden wheat field at sunset" loading="lazy" />
+              <picture><source srcset="/images/wheat-field.webp" type="image/webp" /><img src="/images/wheat-field.jpg" alt="Golden wheat field at sunset" loading="lazy" /></picture>
             </div>
             <span class="services__arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -270,7 +275,7 @@
               </ul>
             </div>
             <div class="services__media">
-              <img src="/images/truck-scania.jpg" alt="White semi truck on an open highway" loading="lazy" />
+              <picture><source srcset="/images/truck-reefer.webp" type="image/webp" /><img src="/images/truck-reefer.jpg" alt="Freightliner tractor with a refrigerated trailer on a US highway" loading="lazy" /></picture>
             </div>
             <span class="services__arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -282,9 +287,9 @@
       <!-- floating hover-reveal preview (desktop) -->
       <div class="services__preview" id="services-preview" aria-hidden="true">
         <div class="services__preview-inner">
-          <img src="/images/container-yard.jpg" alt="" />
-          <img src="/images/wheat-field.jpg" alt="" />
-          <img src="/images/truck-scania.jpg" alt="" />
+          <picture><source srcset="/images/container-yard.webp" type="image/webp" /><img src="/images/container-yard.jpg" alt="" /></picture>
+          <picture><source srcset="/images/wheat-field.webp" type="image/webp" /><img src="/images/wheat-field.jpg" alt="" /></picture>
+          <picture><source srcset="/images/truck-reefer.webp" type="image/webp" /><img src="/images/truck-reefer.jpg" alt="" /></picture>
         </div>
       </div>
     </section>
@@ -368,7 +373,7 @@
             <span class="journey__ghost" data-speed="0.35">Origin</span>
             <span class="journey__big" data-speed="0.15">01</span>
             <figure class="journey__figure" data-speed="0.5">
-              <img src="/images/wheat-field.jpg" alt="Golden wheat field at sunrise" loading="lazy" />
+              <picture><source srcset="/images/wheat-field.webp" type="image/webp" /><img src="/images/wheat-field.jpg" alt="Golden wheat field at sunrise" loading="lazy" /></picture>
               <figcaption>Elevator · Kansas</figcaption>
             </figure>
             <div class="journey__copy" data-speed="0.8">
@@ -383,7 +388,7 @@
             <span class="journey__ghost" data-speed="0.35">Rail</span>
             <span class="journey__big" data-speed="0.15">02</span>
             <figure class="journey__figure" data-speed="0.5">
-              <img src="/images/freight-train.jpg" alt="Freight locomotive pulling tanker cars" loading="lazy" />
+              <picture><source srcset="/images/freight-train.webp" type="image/webp" /><img src="/images/freight-train.jpg" alt="Double-stack intermodal train on the BNSF main line" loading="lazy" /></picture>
               <figcaption>Intermodal ramp · Chicago</figcaption>
             </figure>
             <div class="journey__copy" data-speed="0.8">
@@ -398,7 +403,7 @@
             <span class="journey__ghost" data-speed="0.35">Port</span>
             <span class="journey__big" data-speed="0.15">03</span>
             <figure class="journey__figure" data-speed="0.5">
-              <img src="/images/port-cranes.jpg" alt="Container ship being loaded by gantry cranes" loading="lazy" />
+              <picture><source srcset="/images/port-cranes.webp" type="image/webp" /><img src="/images/port-cranes.jpg" alt="Container ship being loaded by gantry cranes" loading="lazy" /></picture>
               <figcaption>Ocean gateway · Savannah</figcaption>
             </figure>
             <div class="journey__copy" data-speed="0.8">
@@ -413,7 +418,7 @@
             <span class="journey__ghost" data-speed="0.35">Deliver</span>
             <span class="journey__big" data-speed="0.15">04</span>
             <figure class="journey__figure" data-speed="0.5">
-              <img src="/images/truck-mountain.jpg" alt="Semi truck driving a mountain highway" loading="lazy" />
+              <picture><source srcset="/images/truck-sunset.webp" type="image/webp" /><img src="/images/truck-sunset.jpg" alt="American semi truck on an open western highway" loading="lazy" /></picture>
               <figcaption>Final mile · Denver</figcaption>
             </figure>
             <div class="journey__copy" data-speed="0.8">
@@ -462,7 +467,7 @@
               <ul class="process__points"><li>15-minute average quote turnaround</li><li>All-in pricing, fuel included</li></ul>
             </div>
             <div class="process__card-media">
-              <img src="/images/highway-aerial.jpg" alt="Aerial view of a highway interchange" loading="lazy" />
+              <picture><source srcset="/images/highway-aerial.webp" type="image/webp" /><img src="/images/highway-aerial.jpg" alt="Aerial view of a highway interchange" loading="lazy" /></picture>
               <span class="process__badge">01</span>
             </div>
           </div>
@@ -476,7 +481,7 @@
               <ul class="process__points"><li>Safety-scored, insurance-verified</li><li>Re-audited every 90 days</li></ul>
             </div>
             <div class="process__card-media">
-              <img src="/images/truck-trailer.jpg" alt="Semi trailer at sunset" loading="lazy" />
+              <picture><source srcset="/images/truck-trailer.webp" type="image/webp" /><img src="/images/truck-trailer.jpg" alt="Semi trailer at sunset" loading="lazy" /></picture>
               <span class="process__badge">02</span>
             </div>
           </div>
@@ -490,7 +495,7 @@
               <ul class="process__points"><li>30-second GPS refresh</li><li>Exception alerts by SMS &amp; email</li></ul>
             </div>
             <div class="process__card-media">
-              <img src="/images/ship-aerial.jpg" alt="Aerial view of a container ship at sea" loading="lazy" />
+              <picture><source srcset="/images/rail-loop.webp" type="image/webp" /><img src="/images/rail-loop.jpg" alt="Intermodal train curving through the Tehachapi Loop, California" loading="lazy" /></picture>
               <span class="process__badge">03</span>
             </div>
           </div>
@@ -504,7 +509,7 @@
               <ul class="process__points"><li>Instant proof of delivery</li><li>Single consolidated invoice</li></ul>
             </div>
             <div class="process__card-media">
-              <img src="/images/warehouse.jpg" alt="Modern distribution warehouse" loading="lazy" />
+              <picture><source srcset="/images/warehouse-aisles.webp" type="image/webp" /><img src="/images/warehouse-aisles.jpg" alt="Aisles of a US distribution warehouse" loading="lazy" /></picture>
               <span class="process__badge">04</span>
             </div>
           </div>
@@ -526,31 +531,21 @@
         </header>
       </div>
 
-      <div class="columns" id="columns">
-        <div class="columns__col" data-dir="-1">
-          <div class="hub"><img src="/images/freight-train.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Intermodal ramp</span><h4>Chicago Rail Hub</h4><small>6 Class I connections</small></div></div>
-          <div class="hub"><img src="/images/port-cranes.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Ocean gateway</span><h4>Port of Savannah</h4><small>1,800 lifts / month</small></div></div>
-          <div class="hub"><img src="/images/wheat-field.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Elevator network</span><h4>Kansas Grain Belt</h4><small>140 elevators</small></div></div>
-          <div class="hub"><img src="/images/warehouse-aisles.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Cross-dock</span><h4>Dallas Distribution</h4><small>24 / 7 operations</small></div></div>
+      <div class="usmap" id="network-map">
+        <div class="usmap__grid container">
+          <div class="usmap__stage" aria-describedby="usmap-note">
+            <div class="usmap__tip" aria-hidden="true"></div>
+          </div>
+          <aside class="usmap__aside">
+            <div class="usmap__readout" id="usmap-readout" aria-live="polite"></div>
+            <ul class="usmap__legend">
+              <li><i class="usmap__legend-dot"></i>Hub &amp; gateway</li>
+              <li><i class="usmap__legend-lane"></i>Active lane</li>
+            </ul>
+            <p class="usmap__note" id="usmap-note">Hover a hub to isolate its lanes.</p>
+          </aside>
         </div>
-        <div class="columns__col" data-dir="1">
-          <div class="hub"><img src="/images/port-aerial.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Ocean gateway</span><h4>Port of Los Angeles</h4><small>Trans-Pacific lanes</small></div></div>
-          <div class="hub"><img src="/images/grain-closeup.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Grain exchange</span><h4>Minneapolis</h4><small>Spring wheat &amp; oats</small></div></div>
-          <div class="hub"><img src="/images/container-yard.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Intermodal ramp</span><h4>Memphis Intermodal</h4><small>Mid-South corridor</small></div></div>
-          <div class="hub"><img src="/images/truck-sunset.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Border crossing</span><h4>Laredo Gateway</h4><small>Bonded carriers</small></div></div>
-        </div>
-        <div class="columns__col" data-dir="-0.6">
-          <div class="hub"><img src="/images/container-ship.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Ocean gateway</span><h4>Port of Houston</h4><small>Gulf export hub</small></div></div>
-          <div class="hub"><img src="/images/warehouse-shelves.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Elevator network</span><h4>Omaha Elevators</h4><small>Corn &amp; soybean</small></div></div>
-          <div class="hub"><img src="/images/highway-aerial.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Cross-dock</span><h4>Atlanta Cross-dock</h4><small>Southeast hub</small></div></div>
-          <div class="hub"><img src="/images/truck-mountain.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Border crossing</span><h4>Toronto Gateway</h4><small>Canada lanes</small></div></div>
-        </div>
-        <div class="columns__col" data-dir="0.8">
-          <div class="hub"><img src="/images/ship-aerial.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Ocean gateway</span><h4>Seattle–Tacoma</h4><small>Pacific Northwest</small></div></div>
-          <div class="hub"><img src="/images/grain-closeup.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Grain hub</span><h4>Des Moines</h4><small>Harvest surge capacity</small></div></div>
-          <div class="hub"><img src="/images/warehouse.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Cross-dock</span><h4>Columbus Distribution</h4><small>Ohio Valley</small></div></div>
-          <div class="hub"><img src="/images/truck-scania.jpg" alt="" loading="lazy" /><div class="hub__body"><span>Border crossing</span><h4>Monterrey Corridor</h4><small>Mexico lanes</small></div></div>
-        </div>
+      </div>
       </div>
 
       <div class="container">
@@ -731,7 +726,7 @@
 
     <!-- ============================== CONTACT / QUOTE ============================== -->
     <section class="contact section section--dark" id="contact">
-      <div class="contact__bg" aria-hidden="true"><img src="/images/port-aerial.jpg" alt="" loading="lazy" data-parallax="0.15" /></div>
+      <div class="contact__bg" aria-hidden="true"><picture><source srcset="/images/port-aerial.webp" type="image/webp" /><img src="/images/port-aerial.jpg" alt="" loading="lazy" data-parallax="0.15" /></picture></div>
       <div class="container contact__grid">
         <div class="contact__info">
           <span class="eyebrow eyebrow--accent" data-reveal>Request a quote</span>
@@ -821,9 +816,11 @@
       <div class="footer__top">
         <div class="footer__brand">
           <a href="#home" class="nav__logo" data-scroll-to aria-label="Freight Nexus — home">
-            <picture><source srcset="/brand/logo-mark-light.webp" type="image/webp" /><img class="logo-mark" src="/brand/logo-mark-light.png" alt="" width="522" height="384" decoding="async" /></picture>
-            <picture><source srcset="/brand/logo-wordmark-light.webp" type="image/webp" /><img class="logo-word" src="/brand/logo-wordmark-light.png" alt="Freight Nexus" width="1040" height="73" decoding="async" /></picture>
-      </a>
+              <span class="logo-plate">
+                <picture><source srcset="/brand/logo-mark.webp" type="image/webp" /><img class="logo-mark" src="/brand/logo-mark.png" alt="" width="544" height="400" decoding="async" /></picture>
+                <picture><source srcset="/brand/logo-wordmark.webp" type="image/webp" /><img class="logo-word" src="/brand/logo-wordmark.png" alt="Freight Nexus" width="1040" height="73" decoding="async" /></picture>
+              </span>
+            </a>
           <p>Intermodal, grain and general freight brokerage. Based in Apple Valley, California — moving freight North America-wide.</p>
           <form class="footer__news" id="footer-news">
             <input type="email" placeholder="Lane insights, monthly" aria-label="Email address" />
@@ -864,6 +861,11 @@
         <div class="footer__legal">
           <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Carrier setup</a>
         </div>
+        <p class="footer__credits">
+          Photography: BNSF intermodal — Wikideas1 (CC0) ·
+          Tehachapi Loop — <a href="https://www.flickr.com/photos/dbrossard/" rel="nofollow noopener" target="_blank">David Brossard</a> (CC BY-SA 2.0) ·
+          May Trucking — Ewkada (CC BY 4.0) · remaining photography via Unsplash.
+        </p>
         <button class="footer__top-btn" id="back-to-top" data-magnetic>
           <span>Back to top</span>
           <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>

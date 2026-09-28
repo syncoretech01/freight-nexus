@@ -1,21 +1,30 @@
 /* =========================================================
    FREIGHT NEXUS — Design tokens & base
-   Palette sampled from the Freight Nexus logo:
-   deep navy (#001838-#004080), brand blue (#0058b0-#0060c8), ice white
+   Navy & aqua: the navy is the logo's own #001838, the aqua accent
+   and #eaf0fc paper come from the brand reference.
    ========================================================= */
 
 :root {
-  /* Navy scale — the logo's dark half */
-  --navy-950: #04101f;
-  --navy-900: #071a35;
-  --navy-800: #0b2749;
-  --navy-700: #10355f;
-  --navy-600: #16457a;
-  --navy-500: #1d579b;
+  /* Navy — ground */
+  --navy-950: #00102a;
+  --navy-900: #001838;
+  --navy-800: #002347;
+  --navy-700: #0b2f57;
+  --navy-600: #14406e;
+  --navy-500: #1d5490;
   --navy-400: #2f6fc0;
   --navy-300: #5b93d8;
 
-  /* Brand blue scale — the logo's bright half */
+  /* Aqua — the accent */
+  --cyan-700: #0b6c69;
+  --cyan-600: #0e8a86;
+  --cyan-500: #17b3ad;
+  --cyan-400: #3fcfc9;
+  --cyan-300: #74d8d4;
+  --cyan-200: #a5e8e5;
+  --cyan-100: #d6f5f4;
+
+  /* Brand blue — from the logo, used structurally */
   --blue-700: #0b5bb5;
   --blue-600: #0d68cc;
   --blue-500: #1479e0;
@@ -24,27 +33,32 @@
   --blue-200: #b6dbff;
   --blue-100: #e0efff;
 
-  /* Ice scale — cool neutrals */
-  --ice-300: #cfdff2;
-  --ice-200: #e3edf9;
-  --ice-100: #eff4fb;
-  --ice-50: #f7faff;
+  /* Ice — cool neutrals */
+  --ice-300: #c9d8ef;
+  --ice-200: #dde8f8;
+  --ice-100: #eaf0fc;
+  --ice-50: #f5f8ff;
 
   /* Semantic */
   --ink: var(--navy-900);
-  --ink-soft: rgba(7, 26, 53, 0.68);
-  --ink-mute: rgba(7, 26, 53, 0.45);
+  --ink-soft: rgba(0, 24, 56, 0.68);
+  --ink-mute: rgba(0, 24, 56, 0.45);
   --paper: var(--ice-100);
   --paper-soft: var(--ice-50);
   --on-dark: var(--ice-50);
-  --on-dark-soft: rgba(247, 250, 255, 0.7);
-  --on-dark-mute: rgba(247, 250, 255, 0.45);
-  --line: rgba(7, 26, 53, 0.12);
-  --line-dark: rgba(247, 250, 255, 0.14);
+  --on-dark-soft: rgba(245, 248, 255, 0.72);
+  --on-dark-mute: rgba(245, 248, 255, 0.46);
+  --line: rgba(0, 24, 56, 0.12);
+  --line-dark: rgba(245, 248, 255, 0.14);
+
+  /* Accent roles — aqua on dark, deep teal on light */
+  --accent: var(--cyan-300);
+  --accent-strong: var(--cyan-400);
+  --accent-ink: var(--cyan-700);
 
   /* Type */
-  --font-display: 'Instrument Serif', 'Playfair Display', 'Times New Roman', Georgia, serif;
-  --font-body: 'Manrope', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces', 'Instrument Serif', 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter Tight', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'DM Mono', 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
   --fs-hero: clamp(3rem, 7.3vw, 7.8rem);
@@ -88,7 +102,8 @@ html.lenis, html.lenis body { height: auto; }
 body {
   font-family: var(--font-body);
   font-size: var(--fs-body);
-  line-height: 1.6;
+  line-height: 1.62;
+  letter-spacing: -0.006em;
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
@@ -104,12 +119,21 @@ ul, ol { list-style: none; }
 button, input, textarea, select { font: inherit; color: inherit; background: none; border: 0; }
 button { cursor: pointer; }
 address { font-style: normal; }
-::selection { background: var(--blue-400); color: var(--navy-900); }
-:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 3px; border-radius: 4px; }
+::selection { background: var(--accent); color: var(--navy-900); }
+:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; border-radius: 4px; }
 @media (hover: hover) and (pointer: fine) { body { cursor: none; } a, button, label, input, textarea, summary { cursor: none; } }
 
 /* ---------- Typography helpers ---------- */
-h1, h2, h3, h4, .display { font-family: var(--font-display); font-weight: 400; line-height: 1.02; letter-spacing: -0.01em; }
+h1, h2, h3, h4, .display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-variation-settings: 'SOFT' 20, 'WONK' 0, 'opsz' 120;
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+}
+h1 { font-variation-settings: 'SOFT' 24, 'WONK' 1, 'opsz' 144; }
+/* the italic emphasis carries the accent colour throughout */
+h1 em, h2 em, h3 em, .display em { font-variation-settings: 'SOFT' 40, 'WONK' 1, 'opsz' 144; font-weight: 400; }
 h1 em, h2 em, h3 em, .display em { font-style: italic; }
 p { max-width: 65ch; }
 strong { font-weight: 600; }
@@ -126,7 +150,7 @@ strong { font-weight: 600; }
   font-weight: 500;
 }
 .eyebrow::before { content: ''; width: 28px; height: 1px; background: currentColor; opacity: 0.7; }
-.eyebrow--accent { color: var(--blue-400); }
+.eyebrow--accent { color: var(--accent); }
 .eyebrow--light { color: var(--on-dark-soft); }
 
 .section-title {
@@ -135,9 +159,9 @@ strong { font-weight: 600; }
   margin-top: 1.4rem;
   text-wrap: balance;
 }
-.section-title em { color: var(--blue-600); }
+.section-title em { color: var(--accent-ink); }
 .section-title--light { color: var(--on-dark); }
-.section-title--light em { color: var(--blue-400); }
+.section-title--light em { color: var(--accent); }
 
 .section-lead {
   margin-top: 1.6rem;
@@ -167,7 +191,7 @@ strong { font-weight: 600; }
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
 .section { position: relative; padding-block: var(--section-y); }
 .section--dark { background: var(--navy-900); color: var(--on-dark); }
-.section--tint { background: var(--blue-100); }
+.section--tint { background: var(--cyan-100); }
 .grain-overlay { pointer-events: none; position: absolute; inset: 0; opacity: 0.08; mix-blend-mode: overlay; }
 
 /* Global noise texture (subtle film grain over dark sections) */

@@ -8,10 +8,9 @@ import { prepareHero, heroIntro } from './js/hero.js';
 import { initZoom } from './js/zoom.js';
 import { initMarquee } from './js/marquee.js';
 import { initServices } from './js/services.js';
-import { initExplodeScene } from './js/explode-scene.js';
 import { initJourney } from './js/journey.js';
 import { initProcess } from './js/process.js';
-import { initColumns } from './js/columns.js';
+import { initNetworkMap } from './js/network-map.js';
 import { initCounters } from './js/counters.js';
 import { initTilt } from './js/tilt.js';
 import { initSlider3D } from './js/slider3d.js';
@@ -32,17 +31,30 @@ initMagnetic();
 initZoom();
 initMarquee();
 initServices();
-initExplodeScene({
-  canvas: document.getElementById('explode-canvas'),
-  stage: document.getElementById('explode-stage'),
-  section: document.getElementById('inside'),
-  labels: document.getElementById('explode-labels'),
-  items: document.getElementById('explode-list'),
-  progressBar: document.getElementById('explode-progress-bar'),
-});
+/* The container scene is ~0.5 MB of Three.js work; load it only once the
+   section is within a screen of the viewport so it never blocks first paint. */
+const inside = document.getElementById('inside');
+if (inside) {
+  const io = new IntersectionObserver((entries, obs) => {
+    if (!entries.some((e) => e.isIntersecting)) return;
+    obs.disconnect();
+    import('./js/explode-scene.js').then(({ initExplodeScene }) => {
+      initExplodeScene({
+        canvas: document.getElementById('explode-canvas'),
+        stage: document.getElementById('explode-stage'),
+        section: inside,
+        labels: document.getElementById('explode-labels'),
+        items: document.getElementById('explode-list'),
+        progressBar: document.getElementById('explode-progress-bar'),
+      });
+      ScrollTrigger.refresh();
+    });
+  }, { rootMargin: '100% 0px' });
+  io.observe(inside);
+}
 initJourney();
 initProcess();
-initColumns();
+initNetworkMap();
 initCounters('#stats');
 initTilt();
 initSlider3D();
